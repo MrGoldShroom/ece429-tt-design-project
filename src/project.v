@@ -49,9 +49,45 @@ endmodule
 
 // Register File
 module regFile (
-
+input wire [2:0] inAddr;
+input wire [7:0] outAddr1;
+input wire [7:0] outAddr2;
+input wire write;
+input wire clk;
+input wire rst;
+input wire [7:0] in;
+output wire [7:0] out1;
+output wire [7:0] out2;
 );
 
+integer i;
+
+// Create register array
+reg [7:0] regFile [0:7];
+
+// Reset registers
+input
+	always@(*)
+	if (rst == 1) begin
+		for (i = 0; i < 8; i = i + 1)
+		begin
+		regFile[i] = 8'b00000000;
+		end
+		
+	end
+	
+	// Write to register
+	always@(posedge clk)
+	begin
+		if(write == 1'b1 && rst == 1'b0) begin
+			#2 regFile [inAddr] = in;
+		end
+	end
+		
+	// Read inputs from registers
+	assign #2 out1 = regFile[outAddr1];
+	assign #2 out2 = regFile[outAddr2]
+		
 endmodule
 
 // Program Counter Increment
@@ -67,15 +103,92 @@ endmodule
 
 // CPU
 module cpu (
-
+input wire [31:0] instruction;
+input wire clk;
+input wire rst;
+output [31:0] pc;
 );
+
+reg [31:0] pc;
+	wire [31:0] pcRes;
+	
+reg writeEn;
+	reg isAdd;
+	reg isImm;
+	reg [2:0] aluOp;
+	reg [2:0] regReadAddr1;
+	reg [2:0] regReadAddr2;
+	reg [2:0] regWriteAddr;
+	reg [7:0] immVal;
+	wire [7:0] muxOut1;
+	wire [7:0] muxOut2;
+	wire [7:0] aluRes;
+	wire [7:0] subVal;
+	
+reg [7:0] in;
+	wire [7:0] out1;
+	wire [7:0] out2;
+	
+reg [7:0] opCode;
+	reg [2:0] dest;
+	reg [2:0] src1;
+	reg [2:0] src2;
+	
+// Reset
+always@(rst)
+begin
+	if(rst == 1) PC = -4;
+end
+
+// Update Program Counter
+pcInc adder(pc, pcRes);
+always@(posedge clk)
+begin
+	#1
+	pc = pcRes;
+end
+
+// Recieve instructions
+
+always@(instruction)
+begin
+	opCode = instruction[31:24];
+	#1
+	
+	case(opCode)
+	
+	endcase
+end
+
+// Include register file
+regFile registers(in, out1, out2, dest, src1, src2, writeEn, clk, rst);
+always@(instruction)
+begin
+	dest = instruction[18:16];
+	src1 = instruction[10:8];
+	src2 = instruction[2:0];
+	immVal = instruction[7:0];
+end
 
 endmodule
 
 // 2 to 1 Multiplexer
 module mux (
-
+input wire sel;
+input wire [7:0] in0;
+input wire [7:0] in1;
+output reg [7:0] out;
 );
+
+always@(in0, in1, sel)
+begin
+	if(sel == 1'b1) begin
+		out = in0;
+	end
+	else begin
+		out = in1;
+	end
+end
 
 endmodule
 
