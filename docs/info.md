@@ -9,11 +9,11 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+This model works by reading a three-bit opcode to determine the function to operate.
 
 ## How to test
 
-Explain how to use your project
+Select an opcode to use, determine what the result should be first, then compare with the output.
 
 ## External hardware
 
