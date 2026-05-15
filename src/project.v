@@ -40,7 +40,7 @@ reg [2:0] src1;
 reg [2:0] src2;
 	
 // Reset
-always@(rst)
+always_latch
 begin
 	if(rst == 1) pc = -4;
 end
@@ -220,7 +220,7 @@ integer i;
 reg [7:0] regFile [0:7];
 
 // Reset registers
-	always@(*)
+	always_latch
 	if (rst == 1) begin
 		for (i = 0; i < 8; i = i + 1)
 		begin
