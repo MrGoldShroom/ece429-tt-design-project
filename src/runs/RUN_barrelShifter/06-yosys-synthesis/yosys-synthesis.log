@@ -1,0 +1,957 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.62 (git sha1 7326bb7d6, g++ 13.3.0-6ubuntu2~24.04 -fPIC -O3)
+
+1. Executing Liberty frontend: /foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+Imported 428 cell types from liberty file.
+[INFO] Using SDC file '/foss/designs/ece429-tt-design-project/src/runs/RUN_2026-05-16_00-55-12/06-yosys-synthesis/synthesis.abc.sdc' for ABC…
+
+2. Executing Verilog-2005 frontend: /foss/designs/ece429-tt-design-project/src/project.v
+Parsing SystemVerilog input from `/foss/designs/ece429-tt-design-project/src/project.v' to AST representation.
+Storing AST representation for module `$abstract\tt_um_cpu8_mgs'.
+Storing AST representation for module `$abstract\barrelShifter'.
+Storing AST representation for module `$abstract\alu'.
+Storing AST representation for module `$abstract\regFile'.
+Storing AST representation for module `$abstract\pcInc'.
+Storing AST representation for module `$abstract\mux'.
+Storing AST representation for module `$abstract\tcmp'.
+Successfully finished Verilog frontend.
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+
+4. Executing AST frontend in derive mode using pre-parsed AST for module `\barrelShifter'.
+Generating RTLIL representation for module `\barrelShifter'.
+
+4.1. Analyzing design hierarchy..
+Top module:  \barrelShifter
+
+4.2. Analyzing design hierarchy..
+Top module:  \barrelShifter
+Removing unused module `$abstract\tcmp'.
+Removing unused module `$abstract\mux'.
+Removing unused module `$abstract\pcInc'.
+Removing unused module `$abstract\regFile'.
+Removing unused module `$abstract\alu'.
+Removing unused module `$abstract\barrelShifter'.
+Removing unused module `$abstract\tt_um_cpu8_mgs'.
+Removed 7 unused modules.
+Renaming module barrelShifter to barrelShifter.
+
+5. Generating Graphviz representation of design.
+Writing dot description to `/foss/designs/ece429-tt-design-project/src/runs/RUN_2026-05-16_00-55-12/06-yosys-synthesis/hierarchy.dot'.
+Dumping module barrelShifter to page 1.
+
+6. Executing TRIBUF pass.
+
+7. Executing HIERARCHY pass (managing design hierarchy).
+
+7.1. Analyzing design hierarchy..
+Top module:  \barrelShifter
+
+7.2. Analyzing design hierarchy..
+Top module:  \barrelShifter
+Removed 0 unused modules.
+
+8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+9. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/foss/designs/ece429-tt-design-project/src/project.v:146$2 in module barrelShifter.
+Removed a total of 0 dead cases.
+
+10. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 1 assignment to connection.
+
+11. Executing PROC_INIT pass (extract init attributes).
+
+12. Executing PROC_ARST pass (detect async resets in processes).
+
+13. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~1 debug messages>
+
+14. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\barrelShifter.$proc$/foss/designs/ece429-tt-design-project/src/project.v:146$2'.
+     1/1: $1\result[7:0]
+
+15. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\barrelShifter.\result' from process `\barrelShifter.$proc$/foss/designs/ece429-tt-design-project/src/project.v:146$2'.
+
+16. Executing PROC_DFF pass (convert process syncs to FFs).
+
+17. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+18. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\barrelShifter.$proc$/foss/designs/ece429-tt-design-project/src/project.v:146$2'.
+Removing empty process `barrelShifter.$proc$/foss/designs/ece429-tt-design-project/src/project.v:146$2'.
+Cleaned up 1 empty switch.
+
+19. Executing CHECK pass (checking for obvious problems).
+Checking module barrelShifter...
+Found and reported 0 problems.
+
+20. Executing OPT_EXPR pass (perform const folding).
+Optimizing module barrelShifter.
+<suppressed ~1 debug messages>
+
+21. Executing FLATTEN pass (flatten design).
+
+22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module barrelShifter.
+
+23. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \barrelShifter..
+Removed 0 unused cells and 3 unused wires.
+<suppressed ~1 debug messages>
+
+24. Executing OPT_EXPR pass (perform const folding).
+Optimizing module barrelShifter.
+
+25. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\barrelShifter'.
+Computing hashes of 8 cells of `\barrelShifter'.
+Finding duplicate cells in `\barrelShifter'.
+Removed a total of 0 cells.
+
+26. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \barrelShifter..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~2 debug messages>
+
+27. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \barrelShifter.
+Performed a total of 0 changes.
+
+28. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\barrelShifter'.
+Computing hashes of 8 cells of `\barrelShifter'.
+Finding duplicate cells in `\barrelShifter'.
+Removed a total of 0 cells.
+
+29. Executing OPT_DFF pass (perform DFF optimizations).
+
+30. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \barrelShifter..
+
+31. Executing OPT_EXPR pass (perform const folding).
+Optimizing module barrelShifter.
+
+32. Executing FSM pass (extract and optimize FSM).
+
+32.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+32.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+32.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+32.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \barrelShifter..
+
+32.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+32.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+32.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+32.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+33. Executing OPT_EXPR pass (perform const folding).
+Optimizing module barrelShifter.
+
+34. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\barrelShifter'.
+Computing hashes of 8 cells of `\barrelShifter'.
+Finding duplicate cells in `\barrelShifter'.
+Removed a total of 0 cells.
+
+35. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \barrelShifter..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~2 debug messages>
+
+36. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \barrelShifter.
+Performed a total of 0 changes.
+
+37. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\barrelShifter'.
+Computing hashes of 8 cells of `\barrelShifter'.
+Finding duplicate cells in `\barrelShifter'.
+Removed a total of 0 cells.
+
+38. Executing OPT_DFF pass (perform DFF optimizations).
+
+39. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \barrelShifter..
+
+40. Executing OPT_EXPR pass (perform const folding).
+Optimizing module barrelShifter.
+
+41. Executing WREDUCE pass (reducing word size of cells).
+Removed top 1 bits (of 3) from port B of cell barrelShifter.$procmux$8_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell barrelShifter.$procmux$9_CMP0 ($eq).
+Removed top 2 bits (of 3) from port B of cell barrelShifter.$procmux$10_CMP0 ($eq).
+
+42. Executing PEEPOPT pass (run peephole optimizers).
+
+43. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \barrelShifter..
+
+44. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module barrelShifter:
+  created 0 $alu and 0 $macc cells.
+
+45. Executing SHARE pass (SAT-based resource sharing).
+
+46. Executing OPT_EXPR pass (perform const folding).
+Optimizing module barrelShifter.
+
+47. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\barrelShifter'.
+Computing hashes of 8 cells of `\barrelShifter'.
+Finding duplicate cells in `\barrelShifter'.
+Removed a total of 0 cells.
+
+48. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \barrelShifter..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~2 debug messages>
+
+49. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \barrelShifter.
+Performed a total of 0 changes.
+
+50. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\barrelShifter'.
+Computing hashes of 8 cells of `\barrelShifter'.
+Finding duplicate cells in `\barrelShifter'.
+Removed a total of 0 cells.
+
+51. Executing OPT_DFF pass (perform DFF optimizations).
+
+52. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \barrelShifter..
+
+53. Executing OPT_EXPR pass (perform const folding).
+Optimizing module barrelShifter.
+
+54. Executing MEMORY pass.
+
+54.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+54.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+54.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+54.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+54.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+54.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \barrelShifter..
+
+54.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+54.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+54.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \barrelShifter..
+
+54.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+55. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \barrelShifter..
+
+56. Executing OPT_EXPR pass (perform const folding).
+Optimizing module barrelShifter.
+
+57. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\barrelShifter'.
+Computing hashes of 8 cells of `\barrelShifter'.
+Finding duplicate cells in `\barrelShifter'.
+Removed a total of 0 cells.
+
+58. Executing OPT_DFF pass (perform DFF optimizations).
+
+59. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \barrelShifter..
+
+60. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+61. Executing OPT_EXPR pass (perform const folding).
+Optimizing module barrelShifter.
+
+62. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\barrelShifter'.
+Computing hashes of 8 cells of `\barrelShifter'.
+Finding duplicate cells in `\barrelShifter'.
+Removed a total of 0 cells.
+
+63. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \barrelShifter..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~2 debug messages>
+
+64. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \barrelShifter.
+Performed a total of 0 changes.
+
+65. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\barrelShifter'.
+Computing hashes of 8 cells of `\barrelShifter'.
+Finding duplicate cells in `\barrelShifter'.
+Removed a total of 0 cells.
+
+66. Executing OPT_SHARE pass.
+
+67. Executing OPT_DFF pass (perform DFF optimizations).
+
+68. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \barrelShifter..
+
+69. Executing OPT_EXPR pass (perform const folding).
+Optimizing module barrelShifter.
+
+70. Executing TECHMAP pass (map to technology primitives).
+
+70.1. Executing Verilog-2005 frontend: /foss/tools/yosys/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/foss/tools/yosys/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+70.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $eq.
+Using template $paramod$d7387fdb214042e5ef2d69a3f74948694b4bb65e\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $mux.
+No more expansions possible.
+<suppressed ~115 debug messages>
+
+71. Executing OPT_EXPR pass (perform const folding).
+Optimizing module barrelShifter.
+<suppressed ~18 debug messages>
+
+72. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\barrelShifter'.
+Computing hashes of 148 cells of `\barrelShifter'.
+Finding duplicate cells in `\barrelShifter'.
+Computing hashes of 141 cells of `\barrelShifter'.
+Finding duplicate cells in `\barrelShifter'.
+Computing hashes of 139 cells of `\barrelShifter'.
+Finding duplicate cells in `\barrelShifter'.
+<suppressed ~27 debug messages>
+Removed a total of 9 cells.
+
+73. Executing OPT_DFF pass (perform DFF optimizations).
+
+74. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \barrelShifter..
+Removed 0 unused cells and 64 unused wires.
+<suppressed ~1 debug messages>
+
+75. Executing OPT_EXPR pass (perform const folding).
+Optimizing module barrelShifter.
+
+76. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\barrelShifter'.
+Computing hashes of 139 cells of `\barrelShifter'.
+Finding duplicate cells in `\barrelShifter'.
+Removed a total of 0 cells.
+
+77. Executing OPT_DFF pass (perform DFF optimizations).
+
+78. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \barrelShifter..
+
+79. Executing ABC pass (technology mapping using ABC).
+
+79.1. Extracting gate netlist of module `\barrelShifter' to `<abc-temp-dir>/input.blif'..
+
+79.1.1. Executed ABC.
+Extracted 139 gates and 150 wires to a netlist network with 11 inputs and 8 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Feb 14 2026 00:59:35)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library /tmp/yosys-abc-t95wl0/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+79.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        1
+ABC RESULTS:            ANDNOT cells:       58
+ABC RESULTS:               MUX cells:        8
+ABC RESULTS:              NAND cells:        3
+ABC RESULTS:               NOT cells:        1
+ABC RESULTS:                OR cells:       56
+ABC RESULTS:             ORNOT cells:        3
+ABC RESULTS:        internal signals:      131
+ABC RESULTS:           input signals:       11
+ABC RESULTS:          output signals:        8
+Removing temp directory.
+Removing global temp directory.
+
+80. Executing OPT pass (performing simple optimizations).
+
+80.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module barrelShifter.
+
+80.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\barrelShifter'.
+Computing hashes of 130 cells of `\barrelShifter'.
+Finding duplicate cells in `\barrelShifter'.
+Removed a total of 0 cells.
+
+80.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+80.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \barrelShifter..
+Removed 0 unused cells and 55 unused wires.
+<suppressed ~1 debug messages>
+
+80.5. Finished fast OPT passes.
+
+81. Executing HIERARCHY pass (managing design hierarchy).
+
+81.1. Analyzing design hierarchy..
+Top module:  \barrelShifter
+
+81.2. Analyzing design hierarchy..
+Top module:  \barrelShifter
+Removed 0 unused modules.
+
+82. Executing CHECK pass (checking for obvious problems).
+Checking module barrelShifter...
+Found and reported 0 problems.
+
+83. Printing statistics.
+
+=== barrelShifter ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      125 wires
+      141 wire bits
+        3 public wires
+       19 public wire bits
+        3 ports
+       19 port bits
+      130 cells
+       58   $_ANDNOT_
+        1   $_AND_
+        8   $_MUX_
+        3   $_NAND_
+        1   $_NOT_
+        3   $_ORNOT_
+       56   $_OR_
+
+84. Generating Graphviz representation of design.
+Writing dot description to `/foss/designs/ece429-tt-design-project/src/runs/RUN_2026-05-16_00-55-12/06-yosys-synthesis/primitive_techmap.dot'.
+Dumping module barrelShifter to page 1.
+
+85. Executing OPT pass (performing simple optimizations).
+
+85.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module barrelShifter.
+
+85.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\barrelShifter'.
+Computing hashes of 130 cells of `\barrelShifter'.
+Finding duplicate cells in `\barrelShifter'.
+Removed a total of 0 cells.
+
+85.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \barrelShifter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+85.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \barrelShifter.
+Performed a total of 0 changes.
+
+85.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\barrelShifter'.
+Computing hashes of 130 cells of `\barrelShifter'.
+Finding duplicate cells in `\barrelShifter'.
+Removed a total of 0 cells.
+
+85.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+85.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \barrelShifter..
+
+85.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module barrelShifter.
+
+85.9. Finished fast OPT passes. (There is nothing left to do.)
+
+86. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \barrelShifter..
+{
+   "creator": "Yosys 0.62 (git sha1 7326bb7d6, g++ 13.3.0-6ubuntu2~24.04 -fPIC -O3)",
+   "invocation": "stat -json -liberty /foss/designs/ece429-tt-design-project/src/runs/RUN_2026-05-16_00-55-12/tmp/f5d09d12d23e422c978346dcf2912705.lib ",
+   "modules": {
+      "\\barrelShifter": {
+         "num_wires":         125,
+         "num_wire_bits":     141,
+         "num_pub_wires":     3,
+         "num_pub_wire_bits": 19,
+         "num_ports":         3,
+         "num_port_bits":     19,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         130,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 58,
+            "$_AND_": 1,
+            "$_MUX_": 8,
+            "$_NAND_": 3,
+            "$_NOT_": 1,
+            "$_ORNOT_": 3,
+            "$_OR_": 56
+         }
+      }
+   },
+      "design": {
+         "num_wires":         125,
+         "num_wire_bits":     141,
+         "num_pub_wires":     3,
+         "num_pub_wire_bits": 19,
+         "num_ports":         3,
+         "num_port_bits":     19,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         130,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 58,
+            "$_AND_": 1,
+            "$_MUX_": 8,
+            "$_NAND_": 3,
+            "$_NOT_": 1,
+            "$_ORNOT_": 3,
+            "$_OR_": 56
+         }
+      }
+}
+
+87. Printing statistics.
+
+=== barrelShifter ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      125 wires
+      141 wire bits
+        3 public wires
+       19 public wire bits
+        3 ports
+       19 port bits
+      130 cells
+       58   $_ANDNOT_
+        1   $_AND_
+        8   $_MUX_
+        3   $_NAND_
+        1   $_NOT_
+        3   $_ORNOT_
+       56   $_OR_
+
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_NOT_ is unknown!
+   Area for cell type $_ORNOT_ is unknown!
+   Area for cell type $_OR_ is unknown!
+
+[INFO] Applying tri-state buffer mapping from '/foss/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v'…
+
+88. Executing TECHMAP pass (map to technology primitives).
+
+88.1. Executing Verilog-2005 frontend: /foss/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v
+Parsing Verilog input from `/foss/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v' to AST representation.
+Generating RTLIL representation for module `$_TBUF_'.
+Successfully finished Verilog frontend.
+
+88.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~3 debug messages>
+
+89. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+[INFO] Applying latch mapping from '/foss/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v'…
+
+90. Executing TECHMAP pass (map to technology primitives).
+
+90.1. Executing Verilog-2005 frontend: /foss/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v
+Parsing Verilog input from `/foss/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v' to AST representation.
+Generating RTLIL representation for module `$_DLATCH_P_'.
+Generating RTLIL representation for module `$_DLATCH_N_'.
+Successfully finished Verilog frontend.
+
+90.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+91. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+92. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell sky130_fd_sc_hd__dfxtp_2 (noninv, pins=3, area=21.27) is a direct match for cell type $_DFF_P_.
+  cell sky130_fd_sc_hd__dfrtp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN0_.
+  cell sky130_fd_sc_hd__dfstp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN1_.
+  cell sky130_fd_sc_hd__dfbbn_2 (noninv, pins=6, area=35.03) is a direct match for cell type $_DFFSR_NNN_.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    \sky130_fd_sc_hd__dfxtp_2 _DFF_P_ (.CLK( C), .D( D), .Q( Q));
+    unmapped dff cell: $_DFF_NN0_
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \sky130_fd_sc_hd__dfrtp_2 _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .RESET_B( R));
+    \sky130_fd_sc_hd__dfstp_2 _DFF_PN1_ (.CLK( C), .D( D), .Q( Q), .SET_B( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    unmapped dff cell: $_DFFE_NN_
+    unmapped dff cell: $_DFFE_NP_
+    unmapped dff cell: $_DFFE_PN_
+    unmapped dff cell: $_DFFE_PP_
+    \sky130_fd_sc_hd__dfbbn_2 _DFFSR_NNN_ (.CLK_N( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    unmapped dff cell: $_DFFSR_PNN_
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+92.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+Mapping DFF cells in module `\barrelShifter':
+{
+   "creator": "Yosys 0.62 (git sha1 7326bb7d6, g++ 13.3.0-6ubuntu2~24.04 -fPIC -O3)",
+   "invocation": "stat -json -liberty /foss/designs/ece429-tt-design-project/src/runs/RUN_2026-05-16_00-55-12/tmp/f5d09d12d23e422c978346dcf2912705.lib ",
+   "modules": {
+      "\\barrelShifter": {
+         "num_wires":         125,
+         "num_wire_bits":     141,
+         "num_pub_wires":     3,
+         "num_pub_wire_bits": 19,
+         "num_ports":         3,
+         "num_port_bits":     19,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         130,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 58,
+            "$_AND_": 1,
+            "$_MUX_": 8,
+            "$_NAND_": 3,
+            "$_NOT_": 1,
+            "$_ORNOT_": 3,
+            "$_OR_": 56
+         }
+      }
+   },
+      "design": {
+         "num_wires":         125,
+         "num_wire_bits":     141,
+         "num_pub_wires":     3,
+         "num_pub_wire_bits": 19,
+         "num_ports":         3,
+         "num_port_bits":     19,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         130,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 58,
+            "$_AND_": 1,
+            "$_MUX_": 8,
+            "$_NAND_": 3,
+            "$_NOT_": 1,
+            "$_ORNOT_": 3,
+            "$_OR_": 56
+         }
+      }
+}
+
+93. Printing statistics.
+
+=== barrelShifter ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      125 wires
+      141 wire bits
+        3 public wires
+       19 public wire bits
+        3 ports
+       19 port bits
+      130 cells
+       58   $_ANDNOT_
+        1   $_AND_
+        8   $_MUX_
+        3   $_NAND_
+        1   $_NOT_
+        3   $_ORNOT_
+       56   $_OR_
+
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_NOT_ is unknown!
+   Area for cell type $_ORNOT_ is unknown!
+   Area for cell type $_OR_ is unknown!
+
+[INFO] Using generated ABC script '/foss/designs/ece429-tt-design-project/src/runs/RUN_2026-05-16_00-55-12/06-yosys-synthesis/AREA_0.abc'…
+
+94. Executing ABC pass (technology mapping using ABC).
+
+94.1. Extracting gate netlist of module `\barrelShifter' to `/tmp/yosys-abc-oBJiwk/input.blif'..
+
+94.1.1. Executed ABC.
+Extracted 130 gates and 141 wires to a netlist network with 11 inputs and 8 outputs.
+Running ABC script: /tmp/yosys-abc-oBJiwk/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Feb 14 2026 00:59:35)
+ABC: abc 01> empty
+ABC: abc 01> source /tmp/yosys-abc-oBJiwk/abc.script
+ABC: + read_blif /tmp/yosys-abc-oBJiwk/input.blif 
+ABC: + read_lib -w /foss/designs/ece429-tt-design-project/src/runs/RUN_2026-05-16_00-55-12/tmp/f5d09d12d23e422c978346dcf2912705.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.02 sec
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_8".
+ABC: Library "sky130_fd_sc_hd__tt_025C_1v80" from "/foss/designs/ece429-tt-design-project/src/runs/RUN_2026-05-16_00-55-12/tmp/f5d09d12d23e422c978346dcf2912705.lib" has 175 cells (17 skipped: 14 seq; 3 tri-state; 0 no func; 0 dont_use; 0 with 2 outputs; 0 with 3+ outputs).  Time =     0.03 sec
+ABC: Memory =    9.54 MB. Time =     0.03 sec
+ABC: Warning: Detected 2 multi-output cells (for example, "sky130_fd_sc_hd__fa_1").
+ABC: + read_constr -v /foss/designs/ece429-tt-design-project/src/runs/RUN_2026-05-16_00-55-12/06-yosys-synthesis/synthesis.abc.sdc 
+ABC: Setting driving cell to be "sky130_fd_sc_hd__inv_2/Y".
+ABC: Setting output load to be 33.442001.
+ABC: + source /foss/designs/ece429-tt-design-project/src/runs/RUN_2026-05-16_00-55-12/06-yosys-synthesis/AREA_0.abc 
+ABC: Error: The network is combinational.
+ABC: Cannot find the default PI driving cell (sky130_fd_sc_hd__inv_2/Y) in the library.
+ABC: WireLoad = "none"  Gates =     64 (  0.0 %)   Cap = 10.6 ff (  0.0 %)   Area =      701.92 (100.0 %)   Delay =  1283.14 ps  ( 28.1 %)               
+ABC: Path  0 --       1 : 0   37 pi                       A =   0.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.0 ff  Cout =  78.3 ff  Cmax =   0.0 ff  G =    0  
+ABC: Path  1 --      49 : 4    1 sky130_fd_sc_hd__o211a_2 A =  10.01  Df = 225.3  -79.1 ps  S =  37.9 ps  Cin =  2.4 ff  Cout =   1.8 ff  Cmax = 268.3 ff  G =   72  
+ABC: Path  2 --      52 : 4    1 sky130_fd_sc_hd__or4_2   A =   8.76  Df = 850.1 -500.5 ps  S =  95.1 ps  Cin =  1.5 ff  Cout =   2.5 ff  Cmax = 310.4 ff  G =  153  
+ABC: Path  3 --      53 : 5    1 sky130_fd_sc_hd__o32a_2  A =  11.26  Df =1283.1 -492.5 ps  S = 180.9 ps  Cin =  2.3 ff  Cout =  33.4 ff  Cmax = 300.3 ff  G = 1451  
+ABC: Start-point = pi0 (\amt [2]).  End-point = po3 (\result [3]).
+ABC: netlist                       : i/o =   11/    8  lat =    0  nd =    64  edge =    258  area =701.89  delay = 3.00  lev = 3
+ABC: + write_blif /tmp/yosys-abc-oBJiwk/output.blif 
+ABC:                                                                                
+ABC: YOSYS_ABC_DONE 
+
+94.1.2. Re-integrating ABC results.
+ABC RESULTS:   sky130_fd_sc_hd__a2111o_2 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__a221o_2 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__a22o_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__and2_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__and3b_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__and4b_2 cells:       12
+ABC RESULTS:   sky130_fd_sc_hd__and4bb_2 cells:       12
+ABC RESULTS:   sky130_fd_sc_hd__nand3_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nor3_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nor3b_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__o211a_2 cells:        8
+ABC RESULTS:   sky130_fd_sc_hd__o22a_2 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__o32a_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__or4_2 cells:        3
+ABC RESULTS:        internal signals:      122
+ABC RESULTS:           input signals:       11
+ABC RESULTS:          output signals:        8
+Removing temp directory.
+Removing global temp directory.
+
+95. Executing SETUNDEF pass (replace undef values with defined constants).
+
+96. Executing HILOMAP pass (mapping to constant drivers).
+
+97. Executing SPLITNETS pass (splitting up multi-bit signals).
+
+98. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \barrelShifter..
+Removed 0 unused cells and 141 unused wires.
+<suppressed ~1 debug messages>
+
+99. Executing INSBUF pass (insert buffer cells for connected wires).
+
+100. Executing CHECK pass (checking for obvious problems).
+Checking module barrelShifter...
+Found and reported 0 problems.
+{
+   "creator": "Yosys 0.62 (git sha1 7326bb7d6, g++ 13.3.0-6ubuntu2~24.04 -fPIC -O3)",
+   "invocation": "stat -json -liberty /foss/designs/ece429-tt-design-project/src/runs/RUN_2026-05-16_00-55-12/tmp/f5d09d12d23e422c978346dcf2912705.lib ",
+   "modules": {
+      "\\barrelShifter": {
+         "num_wires":         59,
+         "num_wire_bits":     75,
+         "num_pub_wires":     3,
+         "num_pub_wire_bits": 19,
+         "num_ports":         3,
+         "num_port_bits":     19,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         64,
+         "num_submodules":       0,
+         "area":              701.923200,
+         "sequential_area":    0.000000,
+         "num_cells_by_type": {
+            "sky130_fd_sc_hd__a2111o_2": 5,
+            "sky130_fd_sc_hd__a221o_2": 5,
+            "sky130_fd_sc_hd__a22o_2": 3,
+            "sky130_fd_sc_hd__and2_2": 3,
+            "sky130_fd_sc_hd__and3b_2": 1,
+            "sky130_fd_sc_hd__and4b_2": 12,
+            "sky130_fd_sc_hd__and4bb_2": 12,
+            "sky130_fd_sc_hd__nand3_2": 1,
+            "sky130_fd_sc_hd__nor3_2": 1,
+            "sky130_fd_sc_hd__nor3b_2": 2,
+            "sky130_fd_sc_hd__o211a_2": 8,
+            "sky130_fd_sc_hd__o22a_2": 5,
+            "sky130_fd_sc_hd__o32a_2": 3,
+            "sky130_fd_sc_hd__or4_2": 3
+         }
+      }
+   },
+      "design": {
+         "num_wires":         59,
+         "num_wire_bits":     75,
+         "num_pub_wires":     3,
+         "num_pub_wire_bits": 19,
+         "num_ports":         3,
+         "num_port_bits":     19,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         64,
+         "num_submodules":       0,
+         "area":              701.923200,
+         "sequential_area":    0.000000,
+         "num_cells_by_type": {
+            "sky130_fd_sc_hd__a2111o_2": 5,
+            "sky130_fd_sc_hd__a221o_2": 5,
+            "sky130_fd_sc_hd__a22o_2": 3,
+            "sky130_fd_sc_hd__and2_2": 3,
+            "sky130_fd_sc_hd__and3b_2": 1,
+            "sky130_fd_sc_hd__and4b_2": 12,
+            "sky130_fd_sc_hd__and4bb_2": 12,
+            "sky130_fd_sc_hd__nand3_2": 1,
+            "sky130_fd_sc_hd__nor3_2": 1,
+            "sky130_fd_sc_hd__nor3b_2": 2,
+            "sky130_fd_sc_hd__o211a_2": 8,
+            "sky130_fd_sc_hd__o22a_2": 5,
+            "sky130_fd_sc_hd__o32a_2": 3,
+            "sky130_fd_sc_hd__or4_2": 3
+         }
+      }
+}
+
+101. Printing statistics.
+
+=== barrelShifter ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       59        - wires
+       75        - wire bits
+        3        - public wires
+       19        - public wire bits
+        3        - ports
+       19        - port bits
+       64  701.923 cells
+        5    62.56   sky130_fd_sc_hd__a2111o_2
+        5   56.304   sky130_fd_sc_hd__a221o_2
+        3   30.029   sky130_fd_sc_hd__a22o_2
+        3   22.522   sky130_fd_sc_hd__and2_2
+        1    10.01   sky130_fd_sc_hd__and3b_2
+       12   135.13   sky130_fd_sc_hd__and4b_2
+       12  150.144   sky130_fd_sc_hd__and4bb_2
+        1    10.01   sky130_fd_sc_hd__nand3_2
+        1    10.01   sky130_fd_sc_hd__nor3_2
+        2   25.024   sky130_fd_sc_hd__nor3b_2
+        8   80.077   sky130_fd_sc_hd__o211a_2
+        5   50.048   sky130_fd_sc_hd__o22a_2
+        3   33.782   sky130_fd_sc_hd__o32a_2
+        3   26.275   sky130_fd_sc_hd__or4_2
+
+   Chip area for module '\barrelShifter': 701.923200
+     of which used for sequential elements: 0.000000 (0.00%)
+
+102. Executing Verilog backend.
+Dumping module `\barrelShifter'.
+
+103. Executing JSON backend.

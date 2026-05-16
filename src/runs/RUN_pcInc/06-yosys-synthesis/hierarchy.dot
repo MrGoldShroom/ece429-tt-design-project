@@ -1,0 +1,14 @@
+digraph "pcInc" {
+label="pcInc";
+rankdir="LR";
+remincross=true;
+n3 [ shape=octagon, label="res", color="black", fontcolor="black"];
+n4 [ shape=octagon, label="pcInput", color="black", fontcolor="black"];
+v0 [ label="4" ];
+c8 [ shape=record, label="{{<p5> A|<p6> B}|$3\n$add|{<p7> Y}}",  ];
+p1 [shape=box, style=rounded, label="PROC $2\n/foss/designs/ece429-tt-design-project/src/project.v:252.2-255.5", ];
+c8:p7:e -> p1:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+p1:e -> n3:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n4:e -> c8:p5:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+v0:e -> c8:p6:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+}

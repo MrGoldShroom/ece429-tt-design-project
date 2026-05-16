@@ -1,0 +1,377 @@
+VERSION 5.8 ;
+DIVIDERCHAR "/" ;
+BUSBITCHARS "[]" ;
+DESIGN pcInc ;
+UNITS DISTANCE MICRONS 1000 ;
+DIEAREA ( 0 0 ) ( 47180 57900 ) ;
+ROW ROW_0 unithd 5520 10880 N DO 78 BY 1 STEP 460 0 ;
+ROW ROW_1 unithd 5520 13600 FS DO 78 BY 1 STEP 460 0 ;
+ROW ROW_2 unithd 5520 16320 N DO 78 BY 1 STEP 460 0 ;
+ROW ROW_3 unithd 5520 19040 FS DO 78 BY 1 STEP 460 0 ;
+ROW ROW_4 unithd 5520 21760 N DO 78 BY 1 STEP 460 0 ;
+ROW ROW_5 unithd 5520 24480 FS DO 78 BY 1 STEP 460 0 ;
+ROW ROW_6 unithd 5520 27200 N DO 78 BY 1 STEP 460 0 ;
+ROW ROW_7 unithd 5520 29920 FS DO 78 BY 1 STEP 460 0 ;
+ROW ROW_8 unithd 5520 32640 N DO 78 BY 1 STEP 460 0 ;
+ROW ROW_9 unithd 5520 35360 FS DO 78 BY 1 STEP 460 0 ;
+ROW ROW_10 unithd 5520 38080 N DO 78 BY 1 STEP 460 0 ;
+ROW ROW_11 unithd 5520 40800 FS DO 78 BY 1 STEP 460 0 ;
+ROW ROW_12 unithd 5520 43520 N DO 78 BY 1 STEP 460 0 ;
+TRACKS X 230 DO 102 STEP 460 LAYER li1 ;
+TRACKS Y 170 DO 170 STEP 340 LAYER li1 ;
+TRACKS X 170 DO 139 STEP 340 LAYER met1 ;
+TRACKS Y 170 DO 170 STEP 340 LAYER met1 ;
+TRACKS X 230 DO 102 STEP 460 LAYER met2 ;
+TRACKS Y 230 DO 126 STEP 460 LAYER met2 ;
+TRACKS X 340 DO 69 STEP 680 LAYER met3 ;
+TRACKS Y 340 DO 85 STEP 680 LAYER met3 ;
+TRACKS X 460 DO 51 STEP 920 LAYER met4 ;
+TRACKS Y 460 DO 63 STEP 920 LAYER met4 ;
+TRACKS X 1700 DO 14 STEP 3400 LAYER met5 ;
+TRACKS Y 1700 DO 17 STEP 3400 LAYER met5 ;
+COMPONENTS 112 ;
+    - PHY_EDGE_ROW_0_Left_13 sky130_fd_sc_hd__decap_3 + SOURCE DIST + FIXED ( 5520 10880 ) N ;
+    - PHY_EDGE_ROW_0_Right_0 sky130_fd_sc_hd__decap_3 + SOURCE DIST + FIXED ( 40020 10880 ) FN ;
+    - PHY_EDGE_ROW_10_Left_23 sky130_fd_sc_hd__decap_3 + SOURCE DIST + FIXED ( 5520 38080 ) N ;
+    - PHY_EDGE_ROW_10_Right_10 sky130_fd_sc_hd__decap_3 + SOURCE DIST + FIXED ( 40020 38080 ) FN ;
+    - PHY_EDGE_ROW_11_Left_24 sky130_fd_sc_hd__decap_3 + SOURCE DIST + FIXED ( 5520 40800 ) FS ;
+    - PHY_EDGE_ROW_11_Right_11 sky130_fd_sc_hd__decap_3 + SOURCE DIST + FIXED ( 40020 40800 ) S ;
+    - PHY_EDGE_ROW_12_Left_25 sky130_fd_sc_hd__decap_3 + SOURCE DIST + FIXED ( 5520 43520 ) N ;
+    - PHY_EDGE_ROW_12_Right_12 sky130_fd_sc_hd__decap_3 + SOURCE DIST + FIXED ( 40020 43520 ) FN ;
+    - PHY_EDGE_ROW_1_Left_14 sky130_fd_sc_hd__decap_3 + SOURCE DIST + FIXED ( 5520 13600 ) FS ;
+    - PHY_EDGE_ROW_1_Right_1 sky130_fd_sc_hd__decap_3 + SOURCE DIST + FIXED ( 40020 13600 ) S ;
+    - PHY_EDGE_ROW_2_Left_15 sky130_fd_sc_hd__decap_3 + SOURCE DIST + FIXED ( 5520 16320 ) N ;
+    - PHY_EDGE_ROW_2_Right_2 sky130_fd_sc_hd__decap_3 + SOURCE DIST + FIXED ( 40020 16320 ) FN ;
+    - PHY_EDGE_ROW_3_Left_16 sky130_fd_sc_hd__decap_3 + SOURCE DIST + FIXED ( 5520 19040 ) FS ;
+    - PHY_EDGE_ROW_3_Right_3 sky130_fd_sc_hd__decap_3 + SOURCE DIST + FIXED ( 40020 19040 ) S ;
+    - PHY_EDGE_ROW_4_Left_17 sky130_fd_sc_hd__decap_3 + SOURCE DIST + FIXED ( 5520 21760 ) N ;
+    - PHY_EDGE_ROW_4_Right_4 sky130_fd_sc_hd__decap_3 + SOURCE DIST + FIXED ( 40020 21760 ) FN ;
+    - PHY_EDGE_ROW_5_Left_18 sky130_fd_sc_hd__decap_3 + SOURCE DIST + FIXED ( 5520 24480 ) FS ;
+    - PHY_EDGE_ROW_5_Right_5 sky130_fd_sc_hd__decap_3 + SOURCE DIST + FIXED ( 40020 24480 ) S ;
+    - PHY_EDGE_ROW_6_Left_19 sky130_fd_sc_hd__decap_3 + SOURCE DIST + FIXED ( 5520 27200 ) N ;
+    - PHY_EDGE_ROW_6_Right_6 sky130_fd_sc_hd__decap_3 + SOURCE DIST + FIXED ( 40020 27200 ) FN ;
+    - PHY_EDGE_ROW_7_Left_20 sky130_fd_sc_hd__decap_3 + SOURCE DIST + FIXED ( 5520 29920 ) FS ;
+    - PHY_EDGE_ROW_7_Right_7 sky130_fd_sc_hd__decap_3 + SOURCE DIST + FIXED ( 40020 29920 ) S ;
+    - PHY_EDGE_ROW_8_Left_21 sky130_fd_sc_hd__decap_3 + SOURCE DIST + FIXED ( 5520 32640 ) N ;
+    - PHY_EDGE_ROW_8_Right_8 sky130_fd_sc_hd__decap_3 + SOURCE DIST + FIXED ( 40020 32640 ) FN ;
+    - PHY_EDGE_ROW_9_Left_22 sky130_fd_sc_hd__decap_3 + SOURCE DIST + FIXED ( 5520 35360 ) FS ;
+    - PHY_EDGE_ROW_9_Right_9 sky130_fd_sc_hd__decap_3 + SOURCE DIST + FIXED ( 40020 35360 ) S ;
+    - TAP_TAPCELL_ROW_0_26 sky130_fd_sc_hd__tapvpwrvgnd_1 + SOURCE DIST + FIXED ( 18400 10880 ) N ;
+    - TAP_TAPCELL_ROW_0_27 sky130_fd_sc_hd__tapvpwrvgnd_1 + SOURCE DIST + FIXED ( 31280 10880 ) N ;
+    - TAP_TAPCELL_ROW_10_37 sky130_fd_sc_hd__tapvpwrvgnd_1 + SOURCE DIST + FIXED ( 18400 38080 ) N ;
+    - TAP_TAPCELL_ROW_11_38 sky130_fd_sc_hd__tapvpwrvgnd_1 + SOURCE DIST + FIXED ( 31280 40800 ) FS ;
+    - TAP_TAPCELL_ROW_12_39 sky130_fd_sc_hd__tapvpwrvgnd_1 + SOURCE DIST + FIXED ( 18400 43520 ) N ;
+    - TAP_TAPCELL_ROW_12_40 sky130_fd_sc_hd__tapvpwrvgnd_1 + SOURCE DIST + FIXED ( 31280 43520 ) N ;
+    - TAP_TAPCELL_ROW_1_28 sky130_fd_sc_hd__tapvpwrvgnd_1 + SOURCE DIST + FIXED ( 31280 13600 ) FS ;
+    - TAP_TAPCELL_ROW_2_29 sky130_fd_sc_hd__tapvpwrvgnd_1 + SOURCE DIST + FIXED ( 18400 16320 ) N ;
+    - TAP_TAPCELL_ROW_3_30 sky130_fd_sc_hd__tapvpwrvgnd_1 + SOURCE DIST + FIXED ( 31280 19040 ) FS ;
+    - TAP_TAPCELL_ROW_4_31 sky130_fd_sc_hd__tapvpwrvgnd_1 + SOURCE DIST + FIXED ( 18400 21760 ) N ;
+    - TAP_TAPCELL_ROW_5_32 sky130_fd_sc_hd__tapvpwrvgnd_1 + SOURCE DIST + FIXED ( 31280 24480 ) FS ;
+    - TAP_TAPCELL_ROW_6_33 sky130_fd_sc_hd__tapvpwrvgnd_1 + SOURCE DIST + FIXED ( 18400 27200 ) N ;
+    - TAP_TAPCELL_ROW_7_34 sky130_fd_sc_hd__tapvpwrvgnd_1 + SOURCE DIST + FIXED ( 31280 29920 ) FS ;
+    - TAP_TAPCELL_ROW_8_35 sky130_fd_sc_hd__tapvpwrvgnd_1 + SOURCE DIST + FIXED ( 18400 32640 ) N ;
+    - TAP_TAPCELL_ROW_9_36 sky130_fd_sc_hd__tapvpwrvgnd_1 + SOURCE DIST + FIXED ( 31280 35360 ) FS ;
+    - _039_ sky130_fd_sc_hd__inv_2 ;
+    - _040_ sky130_fd_sc_hd__and3_2 ;
+    - _041_ sky130_fd_sc_hd__and4_2 ;
+    - _042_ sky130_fd_sc_hd__and4_2 ;
+    - _043_ sky130_fd_sc_hd__nand2_2 ;
+    - _044_ sky130_fd_sc_hd__and4_2 ;
+    - _045_ sky130_fd_sc_hd__and2_2 ;
+    - _046_ sky130_fd_sc_hd__and2_2 ;
+    - _047_ sky130_fd_sc_hd__and2_2 ;
+    - _048_ sky130_fd_sc_hd__and3_2 ;
+    - _049_ sky130_fd_sc_hd__and2_2 ;
+    - _050_ sky130_fd_sc_hd__and2_2 ;
+    - _051_ sky130_fd_sc_hd__and4_2 ;
+    - _052_ sky130_fd_sc_hd__o21ba_2 ;
+    - _053_ sky130_fd_sc_hd__xor2_2 ;
+    - _054_ sky130_fd_sc_hd__a21oi_2 ;
+    - _055_ sky130_fd_sc_hd__and3_2 ;
+    - _056_ sky130_fd_sc_hd__nor2_2 ;
+    - _057_ sky130_fd_sc_hd__nor2_2 ;
+    - _058_ sky130_fd_sc_hd__and3_2 ;
+    - _059_ sky130_fd_sc_hd__a21oi_2 ;
+    - _060_ sky130_fd_sc_hd__and2_2 ;
+    - _061_ sky130_fd_sc_hd__and2_2 ;
+    - _062_ sky130_fd_sc_hd__a21oi_2 ;
+    - _063_ sky130_fd_sc_hd__nor2_2 ;
+    - _064_ sky130_fd_sc_hd__xor2_2 ;
+    - _065_ sky130_fd_sc_hd__a21oi_2 ;
+    - _066_ sky130_fd_sc_hd__and3_2 ;
+    - _067_ sky130_fd_sc_hd__nor2_2 ;
+    - _068_ sky130_fd_sc_hd__and3_2 ;
+    - _069_ sky130_fd_sc_hd__o2bb2a_2 ;
+    - _070_ sky130_fd_sc_hd__and4_2 ;
+    - _071_ sky130_fd_sc_hd__a21oi_2 ;
+    - _072_ sky130_fd_sc_hd__nor2_2 ;
+    - _073_ sky130_fd_sc_hd__xor2_2 ;
+    - _074_ sky130_fd_sc_hd__a21oi_2 ;
+    - _075_ sky130_fd_sc_hd__and3_2 ;
+    - _076_ sky130_fd_sc_hd__nor2_2 ;
+    - _077_ sky130_fd_sc_hd__and3_2 ;
+    - _078_ sky130_fd_sc_hd__o2bb2a_2 ;
+    - _079_ sky130_fd_sc_hd__nand3_2 ;
+    - _080_ sky130_fd_sc_hd__a21o_2 ;
+    - _081_ sky130_fd_sc_hd__and2_2 ;
+    - _082_ sky130_fd_sc_hd__and4_2 ;
+    - _083_ sky130_fd_sc_hd__xnor2_2 ;
+    - _084_ sky130_fd_sc_hd__xor2_2 ;
+    - _085_ sky130_fd_sc_hd__xor2_2 ;
+    - _086_ sky130_fd_sc_hd__a21oi_2 ;
+    - _087_ sky130_fd_sc_hd__nor2_2 ;
+    - _088_ sky130_fd_sc_hd__nor2_2 ;
+    - _089_ sky130_fd_sc_hd__nor2_2 ;
+    - _090_ sky130_fd_sc_hd__nand2_2 ;
+    - _091_ sky130_fd_sc_hd__xor2_2 ;
+    - _092_ sky130_fd_sc_hd__xnor2_2 ;
+    - _093_ sky130_fd_sc_hd__and4_2 ;
+    - _094_ sky130_fd_sc_hd__a31o_2 ;
+    - _095_ sky130_fd_sc_hd__and2b_2 ;
+    - _096_ sky130_fd_sc_hd__o21a_2 ;
+    - _097_ sky130_fd_sc_hd__xnor2_2 ;
+    - _098_ sky130_fd_sc_hd__a31o_2 ;
+    - _099_ sky130_fd_sc_hd__and2b_2 ;
+    - _100_ sky130_fd_sc_hd__xor2_2 ;
+    - _101_ sky130_fd_sc_hd__a21oi_2 ;
+    - _102_ sky130_fd_sc_hd__nor2_2 ;
+    - _103_ sky130_fd_sc_hd__xor2_2 ;
+    - _104_ sky130_fd_sc_hd__a31o_2 ;
+    - _105_ sky130_fd_sc_hd__and2b_2 ;
+    - _106_ sky130_fd_sc_hd__nor2_2 ;
+    - _107_ sky130_fd_sc_hd__nor2_2 ;
+    - _108_ sky130_fd_sc_hd__buf_2 ;
+    - _109_ sky130_fd_sc_hd__buf_2 ;
+END COMPONENTS
+PINS 64 ;
+    - pcInput[0] + NET pcInput[0] + DIRECTION INPUT + USE SIGNAL ;
+    - pcInput[10] + NET pcInput[10] + DIRECTION INPUT + USE SIGNAL ;
+    - pcInput[11] + NET pcInput[11] + DIRECTION INPUT + USE SIGNAL ;
+    - pcInput[12] + NET pcInput[12] + DIRECTION INPUT + USE SIGNAL ;
+    - pcInput[13] + NET pcInput[13] + DIRECTION INPUT + USE SIGNAL ;
+    - pcInput[14] + NET pcInput[14] + DIRECTION INPUT + USE SIGNAL ;
+    - pcInput[15] + NET pcInput[15] + DIRECTION INPUT + USE SIGNAL ;
+    - pcInput[16] + NET pcInput[16] + DIRECTION INPUT + USE SIGNAL ;
+    - pcInput[17] + NET pcInput[17] + DIRECTION INPUT + USE SIGNAL ;
+    - pcInput[18] + NET pcInput[18] + DIRECTION INPUT + USE SIGNAL ;
+    - pcInput[19] + NET pcInput[19] + DIRECTION INPUT + USE SIGNAL ;
+    - pcInput[1] + NET pcInput[1] + DIRECTION INPUT + USE SIGNAL ;
+    - pcInput[20] + NET pcInput[20] + DIRECTION INPUT + USE SIGNAL ;
+    - pcInput[21] + NET pcInput[21] + DIRECTION INPUT + USE SIGNAL ;
+    - pcInput[22] + NET pcInput[22] + DIRECTION INPUT + USE SIGNAL ;
+    - pcInput[23] + NET pcInput[23] + DIRECTION INPUT + USE SIGNAL ;
+    - pcInput[24] + NET pcInput[24] + DIRECTION INPUT + USE SIGNAL ;
+    - pcInput[25] + NET pcInput[25] + DIRECTION INPUT + USE SIGNAL ;
+    - pcInput[26] + NET pcInput[26] + DIRECTION INPUT + USE SIGNAL ;
+    - pcInput[27] + NET pcInput[27] + DIRECTION INPUT + USE SIGNAL ;
+    - pcInput[28] + NET pcInput[28] + DIRECTION INPUT + USE SIGNAL ;
+    - pcInput[29] + NET pcInput[29] + DIRECTION INPUT + USE SIGNAL ;
+    - pcInput[2] + NET pcInput[2] + DIRECTION INPUT + USE SIGNAL ;
+    - pcInput[30] + NET pcInput[30] + DIRECTION INPUT + USE SIGNAL ;
+    - pcInput[31] + NET pcInput[31] + DIRECTION INPUT + USE SIGNAL ;
+    - pcInput[3] + NET pcInput[3] + DIRECTION INPUT + USE SIGNAL ;
+    - pcInput[4] + NET pcInput[4] + DIRECTION INPUT + USE SIGNAL ;
+    - pcInput[5] + NET pcInput[5] + DIRECTION INPUT + USE SIGNAL ;
+    - pcInput[6] + NET pcInput[6] + DIRECTION INPUT + USE SIGNAL ;
+    - pcInput[7] + NET pcInput[7] + DIRECTION INPUT + USE SIGNAL ;
+    - pcInput[8] + NET pcInput[8] + DIRECTION INPUT + USE SIGNAL ;
+    - pcInput[9] + NET pcInput[9] + DIRECTION INPUT + USE SIGNAL ;
+    - res[0] + NET res[0] + DIRECTION OUTPUT + USE SIGNAL ;
+    - res[10] + NET res[10] + DIRECTION OUTPUT + USE SIGNAL ;
+    - res[11] + NET res[11] + DIRECTION OUTPUT + USE SIGNAL ;
+    - res[12] + NET res[12] + DIRECTION OUTPUT + USE SIGNAL ;
+    - res[13] + NET res[13] + DIRECTION OUTPUT + USE SIGNAL ;
+    - res[14] + NET res[14] + DIRECTION OUTPUT + USE SIGNAL ;
+    - res[15] + NET res[15] + DIRECTION OUTPUT + USE SIGNAL ;
+    - res[16] + NET res[16] + DIRECTION OUTPUT + USE SIGNAL ;
+    - res[17] + NET res[17] + DIRECTION OUTPUT + USE SIGNAL ;
+    - res[18] + NET res[18] + DIRECTION OUTPUT + USE SIGNAL ;
+    - res[19] + NET res[19] + DIRECTION OUTPUT + USE SIGNAL ;
+    - res[1] + NET res[1] + DIRECTION OUTPUT + USE SIGNAL ;
+    - res[20] + NET res[20] + DIRECTION OUTPUT + USE SIGNAL ;
+    - res[21] + NET res[21] + DIRECTION OUTPUT + USE SIGNAL ;
+    - res[22] + NET res[22] + DIRECTION OUTPUT + USE SIGNAL ;
+    - res[23] + NET res[23] + DIRECTION OUTPUT + USE SIGNAL ;
+    - res[24] + NET res[24] + DIRECTION OUTPUT + USE SIGNAL ;
+    - res[25] + NET res[25] + DIRECTION OUTPUT + USE SIGNAL ;
+    - res[26] + NET res[26] + DIRECTION OUTPUT + USE SIGNAL ;
+    - res[27] + NET res[27] + DIRECTION OUTPUT + USE SIGNAL ;
+    - res[28] + NET res[28] + DIRECTION OUTPUT + USE SIGNAL ;
+    - res[29] + NET res[29] + DIRECTION OUTPUT + USE SIGNAL ;
+    - res[2] + NET res[2] + DIRECTION OUTPUT + USE SIGNAL ;
+    - res[30] + NET res[30] + DIRECTION OUTPUT + USE SIGNAL ;
+    - res[31] + NET res[31] + DIRECTION OUTPUT + USE SIGNAL ;
+    - res[3] + NET res[3] + DIRECTION OUTPUT + USE SIGNAL ;
+    - res[4] + NET res[4] + DIRECTION OUTPUT + USE SIGNAL ;
+    - res[5] + NET res[5] + DIRECTION OUTPUT + USE SIGNAL ;
+    - res[6] + NET res[6] + DIRECTION OUTPUT + USE SIGNAL ;
+    - res[7] + NET res[7] + DIRECTION OUTPUT + USE SIGNAL ;
+    - res[8] + NET res[8] + DIRECTION OUTPUT + USE SIGNAL ;
+    - res[9] + NET res[9] + DIRECTION OUTPUT + USE SIGNAL ;
+END PINS
+SPECIALNETS 2 ;
+    - VGND ( PHY_EDGE_ROW_12_Left_25 VNB ) ( PHY_EDGE_ROW_11_Left_24 VNB ) ( PHY_EDGE_ROW_10_Left_23 VNB ) ( PHY_EDGE_ROW_9_Left_22 VNB ) ( PHY_EDGE_ROW_8_Left_21 VNB ) ( PHY_EDGE_ROW_7_Left_20 VNB ) ( PHY_EDGE_ROW_6_Left_19 VNB )
+      ( PHY_EDGE_ROW_5_Left_18 VNB ) ( PHY_EDGE_ROW_4_Left_17 VNB ) ( PHY_EDGE_ROW_3_Left_16 VNB ) ( PHY_EDGE_ROW_2_Left_15 VNB ) ( PHY_EDGE_ROW_1_Left_14 VNB ) ( PHY_EDGE_ROW_0_Left_13 VNB ) ( PHY_EDGE_ROW_12_Right_12 VNB ) ( PHY_EDGE_ROW_11_Right_11 VNB )
+      ( PHY_EDGE_ROW_10_Right_10 VNB ) ( PHY_EDGE_ROW_9_Right_9 VNB ) ( PHY_EDGE_ROW_8_Right_8 VNB ) ( PHY_EDGE_ROW_7_Right_7 VNB ) ( PHY_EDGE_ROW_6_Right_6 VNB ) ( PHY_EDGE_ROW_5_Right_5 VNB ) ( PHY_EDGE_ROW_4_Right_4 VNB ) ( PHY_EDGE_ROW_3_Right_3 VNB )
+      ( PHY_EDGE_ROW_2_Right_2 VNB ) ( PHY_EDGE_ROW_1_Right_1 VNB ) ( PHY_EDGE_ROW_0_Right_0 VNB ) ( TAP_TAPCELL_ROW_12_40 VGND ) ( TAP_TAPCELL_ROW_12_39 VGND ) ( TAP_TAPCELL_ROW_11_38 VGND ) ( TAP_TAPCELL_ROW_10_37 VGND ) ( TAP_TAPCELL_ROW_9_36 VGND )
+      ( TAP_TAPCELL_ROW_8_35 VGND ) ( TAP_TAPCELL_ROW_7_34 VGND ) ( TAP_TAPCELL_ROW_6_33 VGND ) ( TAP_TAPCELL_ROW_5_32 VGND ) ( TAP_TAPCELL_ROW_4_31 VGND ) ( TAP_TAPCELL_ROW_3_30 VGND ) ( TAP_TAPCELL_ROW_2_29 VGND ) ( TAP_TAPCELL_ROW_1_28 VGND )
+      ( TAP_TAPCELL_ROW_0_27 VGND ) ( TAP_TAPCELL_ROW_0_26 VGND ) ( PHY_EDGE_ROW_12_Left_25 VGND ) ( PHY_EDGE_ROW_11_Left_24 VGND ) ( PHY_EDGE_ROW_10_Left_23 VGND ) ( PHY_EDGE_ROW_9_Left_22 VGND ) ( PHY_EDGE_ROW_8_Left_21 VGND ) ( PHY_EDGE_ROW_7_Left_20 VGND )
+      ( PHY_EDGE_ROW_6_Left_19 VGND ) ( PHY_EDGE_ROW_5_Left_18 VGND ) ( PHY_EDGE_ROW_4_Left_17 VGND ) ( PHY_EDGE_ROW_3_Left_16 VGND ) ( PHY_EDGE_ROW_2_Left_15 VGND ) ( PHY_EDGE_ROW_1_Left_14 VGND ) ( PHY_EDGE_ROW_0_Left_13 VGND ) ( PHY_EDGE_ROW_12_Right_12 VGND )
+      ( PHY_EDGE_ROW_11_Right_11 VGND ) ( PHY_EDGE_ROW_10_Right_10 VGND ) ( PHY_EDGE_ROW_9_Right_9 VGND ) ( PHY_EDGE_ROW_8_Right_8 VGND ) ( PHY_EDGE_ROW_7_Right_7 VGND ) ( PHY_EDGE_ROW_6_Right_6 VGND ) ( PHY_EDGE_ROW_5_Right_5 VGND ) ( PHY_EDGE_ROW_4_Right_4 VGND )
+      ( PHY_EDGE_ROW_3_Right_3 VGND ) ( PHY_EDGE_ROW_2_Right_2 VGND ) ( PHY_EDGE_ROW_1_Right_1 VGND ) ( PHY_EDGE_ROW_0_Right_0 VGND ) ( _109_ VNB ) ( _108_ VNB ) ( _107_ VNB ) ( _106_ VNB )
+      ( _105_ VNB ) ( _104_ VNB ) ( _103_ VNB ) ( _102_ VNB ) ( _101_ VNB ) ( _100_ VNB ) ( _099_ VNB ) ( _098_ VNB )
+      ( _097_ VNB ) ( _096_ VNB ) ( _095_ VNB ) ( _094_ VNB ) ( _093_ VNB ) ( _092_ VNB ) ( _091_ VNB ) ( _090_ VNB )
+      ( _089_ VNB ) ( _088_ VNB ) ( _087_ VNB ) ( _086_ VNB ) ( _085_ VNB ) ( _084_ VNB ) ( _083_ VNB ) ( _082_ VNB )
+      ( _081_ VNB ) ( _080_ VNB ) ( _079_ VNB ) ( _078_ VNB ) ( _077_ VNB ) ( _076_ VNB ) ( _075_ VNB ) ( _074_ VNB )
+      ( _073_ VNB ) ( _072_ VNB ) ( _071_ VNB ) ( _070_ VNB ) ( _069_ VNB ) ( _068_ VNB ) ( _067_ VNB ) ( _066_ VNB )
+      ( _065_ VNB ) ( _064_ VNB ) ( _063_ VNB ) ( _062_ VNB ) ( _061_ VNB ) ( _060_ VNB ) ( _059_ VNB ) ( _058_ VNB )
+      ( _057_ VNB ) ( _056_ VNB ) ( _055_ VNB ) ( _054_ VNB ) ( _053_ VNB ) ( _052_ VNB ) ( _051_ VNB ) ( _050_ VNB )
+      ( _049_ VNB ) ( _048_ VNB ) ( _047_ VNB ) ( _046_ VNB ) ( _045_ VNB ) ( _044_ VNB ) ( _043_ VNB ) ( _042_ VNB )
+      ( _041_ VNB ) ( _040_ VNB ) ( _039_ VNB ) ( _109_ VGND ) ( _108_ VGND ) ( _107_ VGND ) ( _106_ VGND ) ( _105_ VGND )
+      ( _104_ VGND ) ( _103_ VGND ) ( _102_ VGND ) ( _101_ VGND ) ( _100_ VGND ) ( _099_ VGND ) ( _098_ VGND ) ( _097_ VGND )
+      ( _096_ VGND ) ( _095_ VGND ) ( _094_ VGND ) ( _093_ VGND ) ( _092_ VGND ) ( _091_ VGND ) ( _090_ VGND ) ( _089_ VGND )
+      ( _088_ VGND ) ( _087_ VGND ) ( _086_ VGND ) ( _085_ VGND ) ( _084_ VGND ) ( _083_ VGND ) ( _082_ VGND ) ( _081_ VGND )
+      ( _080_ VGND ) ( _079_ VGND ) ( _078_ VGND ) ( _077_ VGND ) ( _076_ VGND ) ( _075_ VGND ) ( _074_ VGND ) ( _073_ VGND )
+      ( _072_ VGND ) ( _071_ VGND ) ( _070_ VGND ) ( _069_ VGND ) ( _068_ VGND ) ( _067_ VGND ) ( _066_ VGND ) ( _065_ VGND )
+      ( _064_ VGND ) ( _063_ VGND ) ( _062_ VGND ) ( _061_ VGND ) ( _060_ VGND ) ( _059_ VGND ) ( _058_ VGND ) ( _057_ VGND )
+      ( _056_ VGND ) ( _055_ VGND ) ( _054_ VGND ) ( _053_ VGND ) ( _052_ VGND ) ( _051_ VGND ) ( _050_ VGND ) ( _049_ VGND )
+      ( _048_ VGND ) ( _047_ VGND ) ( _046_ VGND ) ( _045_ VGND ) ( _044_ VGND ) ( _043_ VGND ) ( _042_ VGND ) ( _041_ VGND )
+      ( _040_ VGND ) ( _039_ VGND ) + USE GROUND ;
+    - VPWR ( PHY_EDGE_ROW_12_Left_25 VPB ) ( PHY_EDGE_ROW_11_Left_24 VPB ) ( PHY_EDGE_ROW_10_Left_23 VPB ) ( PHY_EDGE_ROW_9_Left_22 VPB ) ( PHY_EDGE_ROW_8_Left_21 VPB ) ( PHY_EDGE_ROW_7_Left_20 VPB ) ( PHY_EDGE_ROW_6_Left_19 VPB )
+      ( PHY_EDGE_ROW_5_Left_18 VPB ) ( PHY_EDGE_ROW_4_Left_17 VPB ) ( PHY_EDGE_ROW_3_Left_16 VPB ) ( PHY_EDGE_ROW_2_Left_15 VPB ) ( PHY_EDGE_ROW_1_Left_14 VPB ) ( PHY_EDGE_ROW_0_Left_13 VPB ) ( PHY_EDGE_ROW_12_Right_12 VPB ) ( PHY_EDGE_ROW_11_Right_11 VPB )
+      ( PHY_EDGE_ROW_10_Right_10 VPB ) ( PHY_EDGE_ROW_9_Right_9 VPB ) ( PHY_EDGE_ROW_8_Right_8 VPB ) ( PHY_EDGE_ROW_7_Right_7 VPB ) ( PHY_EDGE_ROW_6_Right_6 VPB ) ( PHY_EDGE_ROW_5_Right_5 VPB ) ( PHY_EDGE_ROW_4_Right_4 VPB ) ( PHY_EDGE_ROW_3_Right_3 VPB )
+      ( PHY_EDGE_ROW_2_Right_2 VPB ) ( PHY_EDGE_ROW_1_Right_1 VPB ) ( PHY_EDGE_ROW_0_Right_0 VPB ) ( TAP_TAPCELL_ROW_12_40 VPWR ) ( TAP_TAPCELL_ROW_12_39 VPWR ) ( TAP_TAPCELL_ROW_11_38 VPWR ) ( TAP_TAPCELL_ROW_10_37 VPWR ) ( TAP_TAPCELL_ROW_9_36 VPWR )
+      ( TAP_TAPCELL_ROW_8_35 VPWR ) ( TAP_TAPCELL_ROW_7_34 VPWR ) ( TAP_TAPCELL_ROW_6_33 VPWR ) ( TAP_TAPCELL_ROW_5_32 VPWR ) ( TAP_TAPCELL_ROW_4_31 VPWR ) ( TAP_TAPCELL_ROW_3_30 VPWR ) ( TAP_TAPCELL_ROW_2_29 VPWR ) ( TAP_TAPCELL_ROW_1_28 VPWR )
+      ( TAP_TAPCELL_ROW_0_27 VPWR ) ( TAP_TAPCELL_ROW_0_26 VPWR ) ( PHY_EDGE_ROW_12_Left_25 VPWR ) ( PHY_EDGE_ROW_11_Left_24 VPWR ) ( PHY_EDGE_ROW_10_Left_23 VPWR ) ( PHY_EDGE_ROW_9_Left_22 VPWR ) ( PHY_EDGE_ROW_8_Left_21 VPWR ) ( PHY_EDGE_ROW_7_Left_20 VPWR )
+      ( PHY_EDGE_ROW_6_Left_19 VPWR ) ( PHY_EDGE_ROW_5_Left_18 VPWR ) ( PHY_EDGE_ROW_4_Left_17 VPWR ) ( PHY_EDGE_ROW_3_Left_16 VPWR ) ( PHY_EDGE_ROW_2_Left_15 VPWR ) ( PHY_EDGE_ROW_1_Left_14 VPWR ) ( PHY_EDGE_ROW_0_Left_13 VPWR ) ( PHY_EDGE_ROW_12_Right_12 VPWR )
+      ( PHY_EDGE_ROW_11_Right_11 VPWR ) ( PHY_EDGE_ROW_10_Right_10 VPWR ) ( PHY_EDGE_ROW_9_Right_9 VPWR ) ( PHY_EDGE_ROW_8_Right_8 VPWR ) ( PHY_EDGE_ROW_7_Right_7 VPWR ) ( PHY_EDGE_ROW_6_Right_6 VPWR ) ( PHY_EDGE_ROW_5_Right_5 VPWR ) ( PHY_EDGE_ROW_4_Right_4 VPWR )
+      ( PHY_EDGE_ROW_3_Right_3 VPWR ) ( PHY_EDGE_ROW_2_Right_2 VPWR ) ( PHY_EDGE_ROW_1_Right_1 VPWR ) ( PHY_EDGE_ROW_0_Right_0 VPWR ) ( _109_ VPB ) ( _108_ VPB ) ( _107_ VPB ) ( _106_ VPB )
+      ( _105_ VPB ) ( _104_ VPB ) ( _103_ VPB ) ( _102_ VPB ) ( _101_ VPB ) ( _100_ VPB ) ( _099_ VPB ) ( _098_ VPB )
+      ( _097_ VPB ) ( _096_ VPB ) ( _095_ VPB ) ( _094_ VPB ) ( _093_ VPB ) ( _092_ VPB ) ( _091_ VPB ) ( _090_ VPB )
+      ( _089_ VPB ) ( _088_ VPB ) ( _087_ VPB ) ( _086_ VPB ) ( _085_ VPB ) ( _084_ VPB ) ( _083_ VPB ) ( _082_ VPB )
+      ( _081_ VPB ) ( _080_ VPB ) ( _079_ VPB ) ( _078_ VPB ) ( _077_ VPB ) ( _076_ VPB ) ( _075_ VPB ) ( _074_ VPB )
+      ( _073_ VPB ) ( _072_ VPB ) ( _071_ VPB ) ( _070_ VPB ) ( _069_ VPB ) ( _068_ VPB ) ( _067_ VPB ) ( _066_ VPB )
+      ( _065_ VPB ) ( _064_ VPB ) ( _063_ VPB ) ( _062_ VPB ) ( _061_ VPB ) ( _060_ VPB ) ( _059_ VPB ) ( _058_ VPB )
+      ( _057_ VPB ) ( _056_ VPB ) ( _055_ VPB ) ( _054_ VPB ) ( _053_ VPB ) ( _052_ VPB ) ( _051_ VPB ) ( _050_ VPB )
+      ( _049_ VPB ) ( _048_ VPB ) ( _047_ VPB ) ( _046_ VPB ) ( _045_ VPB ) ( _044_ VPB ) ( _043_ VPB ) ( _042_ VPB )
+      ( _041_ VPB ) ( _040_ VPB ) ( _039_ VPB ) ( _109_ VPWR ) ( _108_ VPWR ) ( _107_ VPWR ) ( _106_ VPWR ) ( _105_ VPWR )
+      ( _104_ VPWR ) ( _103_ VPWR ) ( _102_ VPWR ) ( _101_ VPWR ) ( _100_ VPWR ) ( _099_ VPWR ) ( _098_ VPWR ) ( _097_ VPWR )
+      ( _096_ VPWR ) ( _095_ VPWR ) ( _094_ VPWR ) ( _093_ VPWR ) ( _092_ VPWR ) ( _091_ VPWR ) ( _090_ VPWR ) ( _089_ VPWR )
+      ( _088_ VPWR ) ( _087_ VPWR ) ( _086_ VPWR ) ( _085_ VPWR ) ( _084_ VPWR ) ( _083_ VPWR ) ( _082_ VPWR ) ( _081_ VPWR )
+      ( _080_ VPWR ) ( _079_ VPWR ) ( _078_ VPWR ) ( _077_ VPWR ) ( _076_ VPWR ) ( _075_ VPWR ) ( _074_ VPWR ) ( _073_ VPWR )
+      ( _072_ VPWR ) ( _071_ VPWR ) ( _070_ VPWR ) ( _069_ VPWR ) ( _068_ VPWR ) ( _067_ VPWR ) ( _066_ VPWR ) ( _065_ VPWR )
+      ( _064_ VPWR ) ( _063_ VPWR ) ( _062_ VPWR ) ( _061_ VPWR ) ( _060_ VPWR ) ( _059_ VPWR ) ( _058_ VPWR ) ( _057_ VPWR )
+      ( _056_ VPWR ) ( _055_ VPWR ) ( _054_ VPWR ) ( _053_ VPWR ) ( _052_ VPWR ) ( _051_ VPWR ) ( _050_ VPWR ) ( _049_ VPWR )
+      ( _048_ VPWR ) ( _047_ VPWR ) ( _046_ VPWR ) ( _045_ VPWR ) ( _044_ VPWR ) ( _043_ VPWR ) ( _042_ VPWR ) ( _041_ VPWR )
+      ( _040_ VPWR ) ( _039_ VPWR ) + USE POWER ;
+END SPECIALNETS
+NETS 103 ;
+    - _000_ ( _083_ B ) ( _081_ A ) ( _079_ Y ) + USE SIGNAL ;
+    - _001_ ( _081_ B ) ( _080_ X ) + USE SIGNAL ;
+    - _002_ ( _084_ B ) ( _082_ X ) + USE SIGNAL ;
+    - _003_ ( _087_ B ) ( _086_ Y ) + USE SIGNAL ;
+    - _004_ ( _089_ B ) ( _088_ Y ) + USE SIGNAL ;
+    - _005_ ( _092_ B ) ( _090_ Y ) + USE SIGNAL ;
+    - _006_ ( _096_ A2 ) ( _095_ A_N ) ( _093_ X ) + USE SIGNAL ;
+    - _007_ ( _095_ B ) ( _094_ X ) + USE SIGNAL ;
+    - _008_ ( _099_ B ) ( _098_ X ) + USE SIGNAL ;
+    - _009_ ( _102_ B ) ( _101_ Y ) + USE SIGNAL ;
+    - _010_ ( _105_ B ) ( _104_ X ) + USE SIGNAL ;
+    - _011_ ( _107_ B ) ( _106_ Y ) + USE SIGNAL ;
+    - _012_ ( _088_ B ) ( _087_ A ) ( _040_ X ) + USE SIGNAL ;
+    - _013_ ( _098_ A2 ) ( _094_ A3 ) ( _093_ D ) ( _091_ B ) ( _090_ B ) ( _089_ A ) ( _044_ C )
+      ( _043_ A ) ( _041_ X ) + USE SIGNAL ;
+    - _014_ ( _098_ A3 ) ( _044_ D ) ( _043_ B ) ( _042_ X ) + USE SIGNAL ;
+    - _015_ ( _097_ B ) ( _096_ B1 ) ( _043_ Y ) + USE SIGNAL ;
+    - _016_ ( _104_ A2 ) ( _101_ A2 ) ( _100_ B ) ( _099_ A_N ) ( _051_ A ) ( _048_ A ) ( _046_ A )
+      ( _044_ X ) + USE SIGNAL ;
+    - _017_ ( _104_ A3 ) ( _051_ B ) ( _048_ B ) ( _046_ B ) ( _045_ X ) + USE SIGNAL ;
+    - _018_ ( _103_ B ) ( _102_ A ) ( _046_ X ) + USE SIGNAL ;
+    - _019_ ( _051_ C ) ( _048_ C ) ( _047_ X ) + USE SIGNAL ;
+    - _020_ ( _106_ B ) ( _105_ A_N ) ( _049_ B ) ( _048_ X ) + USE SIGNAL ;
+    - _021_ ( _107_ A ) ( _052_ A2 ) ( _049_ X ) + USE SIGNAL ;
+    - _022_ ( _051_ D ) ( _050_ X ) + USE SIGNAL ;
+    - _023_ ( _070_ B ) ( _062_ A1 ) ( _061_ A ) ( _059_ A1 ) ( _055_ C ) ( _054_ A2 ) ( _053_ B )
+      ( _052_ B1_N ) ( _051_ X ) + USE SIGNAL ;
+    - _024_ ( _056_ A ) ( _054_ Y ) + USE SIGNAL ;
+    - _025_ ( _057_ B ) ( _056_ B ) ( _055_ X ) + USE SIGNAL ;
+    - _026_ ( _059_ B1 ) ( _057_ Y ) + USE SIGNAL ;
+    - _027_ ( _062_ A2 ) ( _060_ B ) ( _059_ A2 ) ( _058_ X ) + USE SIGNAL ;
+    - _028_ ( _070_ C ) ( _061_ B ) ( _060_ X ) + USE SIGNAL ;
+    - _029_ ( _071_ A1 ) ( _069_ A1_N ) ( _066_ C ) ( _065_ A2 ) ( _064_ B ) ( _063_ A ) ( _061_ X ) + USE SIGNAL ;
+    - _030_ ( _063_ B ) ( _062_ Y ) + USE SIGNAL ;
+    - _031_ ( _067_ A ) ( _065_ Y ) + USE SIGNAL ;
+    - _032_ ( _069_ B1 ) ( _067_ B ) ( _066_ X ) + USE SIGNAL ;
+    - _033_ ( _071_ A2 ) ( _070_ D ) ( _069_ A2_N ) ( _068_ X ) + USE SIGNAL ;
+    - _034_ ( _082_ C ) ( _080_ A1 ) ( _079_ B ) ( _078_ A1_N ) ( _075_ C ) ( _074_ A2 ) ( _073_ B )
+      ( _072_ A ) ( _070_ X ) + USE SIGNAL ;
+    - _035_ ( _072_ B ) ( _071_ Y ) + USE SIGNAL ;
+    - _036_ ( _076_ A ) ( _074_ Y ) + USE SIGNAL ;
+    - _037_ ( _078_ B1 ) ( _076_ B ) ( _075_ X ) + USE SIGNAL ;
+    - _038_ ( _082_ D ) ( _080_ A2 ) ( _079_ C ) ( _078_ A2_N ) ( _077_ X ) + USE SIGNAL ;
+    - pcInput[0] ( PIN pcInput[0] ) ( _108_ A ) + USE SIGNAL ;
+    - pcInput[10] ( PIN pcInput[10] ) ( _098_ A1 ) ( _097_ A ) ( _044_ A ) + USE SIGNAL ;
+    - pcInput[11] ( PIN pcInput[11] ) ( _098_ B1 ) ( _044_ B ) + USE SIGNAL ;
+    - pcInput[12] ( PIN pcInput[12] ) ( _101_ A1 ) ( _100_ A ) ( _045_ A ) + USE SIGNAL ;
+    - pcInput[13] ( PIN pcInput[13] ) ( _101_ B1 ) ( _045_ B ) + USE SIGNAL ;
+    - pcInput[14] ( PIN pcInput[14] ) ( _104_ A1 ) ( _103_ A ) ( _047_ A ) + USE SIGNAL ;
+    - pcInput[15] ( PIN pcInput[15] ) ( _104_ B1 ) ( _047_ B ) + USE SIGNAL ;
+    - pcInput[16] ( PIN pcInput[16] ) ( _106_ A ) ( _050_ A ) ( _049_ A ) + USE SIGNAL ;
+    - pcInput[17] ( PIN pcInput[17] ) ( _052_ A1 ) ( _050_ B ) + USE SIGNAL ;
+    - pcInput[18] ( PIN pcInput[18] ) ( _058_ A ) ( _055_ A ) ( _054_ A1 ) ( _053_ A ) + USE SIGNAL ;
+    - pcInput[19] ( PIN pcInput[19] ) ( _058_ B ) ( _055_ B ) ( _054_ B1 ) + USE SIGNAL ;
+    - pcInput[1] ( PIN pcInput[1] ) ( _109_ A ) + USE SIGNAL ;
+    - pcInput[20] ( PIN pcInput[20] ) ( _058_ C ) ( _057_ A ) + USE SIGNAL ;
+    - pcInput[21] ( PIN pcInput[21] ) ( _062_ B1 ) ( _060_ A ) + USE SIGNAL ;
+    - pcInput[22] ( PIN pcInput[22] ) ( _068_ A ) ( _066_ A ) ( _065_ A1 ) ( _064_ A ) + USE SIGNAL ;
+    - pcInput[23] ( PIN pcInput[23] ) ( _068_ B ) ( _066_ B ) ( _065_ B1 ) + USE SIGNAL ;
+    - pcInput[24] ( PIN pcInput[24] ) ( _069_ B2 ) ( _068_ C ) + USE SIGNAL ;
+    - pcInput[25] ( PIN pcInput[25] ) ( _071_ B1 ) ( _070_ A ) + USE SIGNAL ;
+    - pcInput[26] ( PIN pcInput[26] ) ( _077_ A ) ( _075_ A ) ( _074_ A1 ) ( _073_ A ) + USE SIGNAL ;
+    - pcInput[27] ( PIN pcInput[27] ) ( _077_ B ) ( _075_ B ) ( _074_ B1 ) + USE SIGNAL ;
+    - pcInput[28] ( PIN pcInput[28] ) ( _078_ B2 ) ( _077_ C ) + USE SIGNAL ;
+    - pcInput[29] ( PIN pcInput[29] ) ( _082_ A ) ( _080_ B1 ) ( _079_ A ) + USE SIGNAL ;
+    - pcInput[2] ( PIN pcInput[2] ) ( _086_ A1 ) ( _085_ A ) ( _041_ A ) ( _040_ A ) ( _039_ A ) + USE SIGNAL ;
+    - pcInput[30] ( PIN pcInput[30] ) ( _083_ A ) ( _082_ B ) + USE SIGNAL ;
+    - pcInput[31] ( PIN pcInput[31] ) ( _084_ A ) + USE SIGNAL ;
+    - pcInput[3] ( PIN pcInput[3] ) ( _086_ A2 ) ( _085_ B ) ( _041_ D ) ( _040_ C ) + USE SIGNAL ;
+    - pcInput[4] ( PIN pcInput[4] ) ( _086_ B1 ) ( _041_ B ) ( _040_ B ) + USE SIGNAL ;
+    - pcInput[5] ( PIN pcInput[5] ) ( _088_ A ) ( _041_ C ) + USE SIGNAL ;
+    - pcInput[6] ( PIN pcInput[6] ) ( _094_ A1 ) ( _093_ B ) ( _091_ A ) ( _090_ A ) ( _042_ C ) + USE SIGNAL ;
+    - pcInput[7] ( PIN pcInput[7] ) ( _094_ A2 ) ( _093_ C ) ( _092_ A ) ( _042_ D ) + USE SIGNAL ;
+    - pcInput[8] ( PIN pcInput[8] ) ( _094_ B1 ) ( _093_ A ) ( _042_ A ) + USE SIGNAL ;
+    - pcInput[9] ( PIN pcInput[9] ) ( _096_ A1 ) ( _042_ B ) + USE SIGNAL ;
+    - res[0] ( PIN res[0] ) ( _108_ X ) + USE SIGNAL ;
+    - res[10] ( PIN res[10] ) ( _097_ Y ) + USE SIGNAL ;
+    - res[11] ( PIN res[11] ) ( _099_ X ) + USE SIGNAL ;
+    - res[12] ( PIN res[12] ) ( _100_ X ) + USE SIGNAL ;
+    - res[13] ( PIN res[13] ) ( _102_ Y ) + USE SIGNAL ;
+    - res[14] ( PIN res[14] ) ( _103_ X ) + USE SIGNAL ;
+    - res[15] ( PIN res[15] ) ( _105_ X ) + USE SIGNAL ;
+    - res[16] ( PIN res[16] ) ( _107_ Y ) + USE SIGNAL ;
+    - res[17] ( PIN res[17] ) ( _052_ X ) + USE SIGNAL ;
+    - res[18] ( PIN res[18] ) ( _053_ X ) + USE SIGNAL ;
+    - res[19] ( PIN res[19] ) ( _056_ Y ) + USE SIGNAL ;
+    - res[1] ( PIN res[1] ) ( _109_ X ) + USE SIGNAL ;
+    - res[20] ( PIN res[20] ) ( _059_ Y ) + USE SIGNAL ;
+    - res[21] ( PIN res[21] ) ( _063_ Y ) + USE SIGNAL ;
+    - res[22] ( PIN res[22] ) ( _064_ X ) + USE SIGNAL ;
+    - res[23] ( PIN res[23] ) ( _067_ Y ) + USE SIGNAL ;
+    - res[24] ( PIN res[24] ) ( _069_ X ) + USE SIGNAL ;
+    - res[25] ( PIN res[25] ) ( _072_ Y ) + USE SIGNAL ;
+    - res[26] ( PIN res[26] ) ( _073_ X ) + USE SIGNAL ;
+    - res[27] ( PIN res[27] ) ( _076_ Y ) + USE SIGNAL ;
+    - res[28] ( PIN res[28] ) ( _078_ X ) + USE SIGNAL ;
+    - res[29] ( PIN res[29] ) ( _081_ X ) + USE SIGNAL ;
+    - res[2] ( PIN res[2] ) ( _039_ Y ) + USE SIGNAL ;
+    - res[30] ( PIN res[30] ) ( _083_ Y ) + USE SIGNAL ;
+    - res[31] ( PIN res[31] ) ( _084_ X ) + USE SIGNAL ;
+    - res[3] ( PIN res[3] ) ( _085_ X ) + USE SIGNAL ;
+    - res[4] ( PIN res[4] ) ( _087_ Y ) + USE SIGNAL ;
+    - res[5] ( PIN res[5] ) ( _089_ Y ) + USE SIGNAL ;
+    - res[6] ( PIN res[6] ) ( _091_ X ) + USE SIGNAL ;
+    - res[7] ( PIN res[7] ) ( _092_ Y ) + USE SIGNAL ;
+    - res[8] ( PIN res[8] ) ( _095_ X ) + USE SIGNAL ;
+    - res[9] ( PIN res[9] ) ( _096_ X ) + USE SIGNAL ;
+END NETS
+END DESIGN

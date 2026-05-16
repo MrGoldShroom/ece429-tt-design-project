@@ -1,0 +1,1077 @@
+{
+  "creator": "Yosys 0.62 (git sha1 7326bb7d6, g++ 13.3.0-6ubuntu2~24.04 -fPIC -O3)",
+  "modules": {
+    "alu": {
+      "attributes": {
+        "hdlname": "alu",
+        "top": "00000000000000000000000000000001",
+        "src": "/foss/designs/ece429-tt-design-project/src/project.v:163.1-202.10"
+      },
+      "ports": {
+        "data1": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9 ]
+        },
+        "data2": {
+          "direction": "input",
+          "bits": [ 10, 11, 12, 13, 14, 15, 16, 17 ]
+        },
+        "res": {
+          "direction": "output",
+          "bits": [ 18, 19, 20, 21, 22, 23, 24, 25 ]
+        },
+        "op": {
+          "direction": "input",
+          "bits": [ 26, 27, 28 ]
+        },
+        "z": {
+          "direction": "output",
+          "bits": [ 29 ]
+        }
+      },
+      "cells": {
+        "$add$/foss/designs/ece429-tt-design-project/src/project.v:182$3": {
+          "hide_name": 1,
+          "type": "$add",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001000",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000001000",
+            "Y_WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:182.13-182.26"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8, 9 ],
+            "B": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+            "Y": [ 30, 31, 32, 33, 34, 35, 36, 37 ]
+          }
+        },
+        "$and$/foss/designs/ece429-tt-design-project/src/project.v:184$4": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001000",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000001000",
+            "Y_WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:184.13-184.26"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8, 9 ],
+            "B": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+            "Y": [ 38, 39, 40, 41, 42, 43, 44, 45 ]
+          }
+        },
+        "$flatten\\shifter.$procmux$32": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000111",
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:154.42-154.42|/foss/designs/ece429-tt-design-project/src/project.v:148.3-157.10"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9, 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ 8, 9, 2, 3, 4, 5, 6, 7, 7, 8, 9, 2, 3, 4, 5, 6, 6, 7, 8, 9, 2, 3, 4, 5, 5, 6, 7, 8, 9, 2, 3, 4, 4, 5, 6, 7, 8, 9, 2, 3, 3, 4, 5, 6, 7, 8, 9, 2, 2, 3, 4, 5, 6, 7, 8, 9 ],
+            "S": [ 46, 47, 48, 49, 50, 51, 52 ],
+            "Y": [ 53, 54, 55, 56, 57, 58, 59, 60 ]
+          }
+        },
+        "$flatten\\shifter.$procmux$33_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:154.42-154.42|/foss/designs/ece429-tt-design-project/src/project.v:148.3-157.10"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 15, 16, 17 ],
+            "B": [ "0", "1", "1" ],
+            "Y": [ 46 ]
+          }
+        },
+        "$flatten\\shifter.$procmux$34_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:153.42-153.42|/foss/designs/ece429-tt-design-project/src/project.v:148.3-157.10"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 15, 16, 17 ],
+            "B": [ "1", "0", "1" ],
+            "Y": [ 47 ]
+          }
+        },
+        "$flatten\\shifter.$procmux$35_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:152.42-152.42|/foss/designs/ece429-tt-design-project/src/project.v:148.3-157.10"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 15, 16, 17 ],
+            "B": [ "0", "0", "1" ],
+            "Y": [ 48 ]
+          }
+        },
+        "$flatten\\shifter.$procmux$36_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:151.42-151.42|/foss/designs/ece429-tt-design-project/src/project.v:148.3-157.10"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 15, 16, 17 ],
+            "B": [ "1", "1", "0" ],
+            "Y": [ 49 ]
+          }
+        },
+        "$flatten\\shifter.$procmux$37_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:150.40-150.40|/foss/designs/ece429-tt-design-project/src/project.v:148.3-157.10"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 15, 16, 17 ],
+            "B": [ "0", "1", "0" ],
+            "Y": [ 50 ]
+          }
+        },
+        "$flatten\\shifter.$procmux$38_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:149.24-149.24|/foss/designs/ece429-tt-design-project/src/project.v:148.3-157.10"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 15, 16, 17 ],
+            "B": [ "1", "0", "0" ],
+            "Y": [ 51 ]
+          }
+        },
+        "$flatten\\shifter.$procmux$39_CMP0": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:148.12-148.12|/foss/designs/ece429-tt-design-project/src/project.v:148.3-157.10"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 15, 16, 17 ],
+            "Y": [ 52 ]
+          }
+        },
+        "$not$/foss/designs/ece429-tt-design-project/src/project.v:200$10": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:200.7-200.29"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 61 ],
+            "Y": [ 62 ]
+          }
+        },
+        "$not$/foss/designs/ece429-tt-design-project/src/project.v:200$12": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:200.7-200.37"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 63 ],
+            "Y": [ 64 ]
+          }
+        },
+        "$not$/foss/designs/ece429-tt-design-project/src/project.v:200$14": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:200.7-200.45"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 65 ],
+            "Y": [ 66 ]
+          }
+        },
+        "$not$/foss/designs/ece429-tt-design-project/src/project.v:200$16": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:200.7-200.53"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 67 ],
+            "Y": [ 68 ]
+          }
+        },
+        "$not$/foss/designs/ece429-tt-design-project/src/project.v:200$18": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:200.7-200.61"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 69 ],
+            "Y": [ 70 ]
+          }
+        },
+        "$not$/foss/designs/ece429-tt-design-project/src/project.v:200$20": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:200.7-200.69"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 71 ],
+            "Y": [ 29 ]
+          }
+        },
+        "$not$/foss/designs/ece429-tt-design-project/src/project.v:200$8": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:200.7-200.21"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 72 ],
+            "Y": [ 73 ]
+          }
+        },
+        "$or$/foss/designs/ece429-tt-design-project/src/project.v:186$5": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001000",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000001000",
+            "Y_WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:186.13-186.26"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8, 9 ],
+            "B": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+            "Y": [ 74, 75, 76, 77, 78, 79, 80, 81 ]
+          }
+        },
+        "$or$/foss/designs/ece429-tt-design-project/src/project.v:200$11": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:200.7-200.37"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 62 ],
+            "B": [ 21 ],
+            "Y": [ 63 ]
+          }
+        },
+        "$or$/foss/designs/ece429-tt-design-project/src/project.v:200$13": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:200.7-200.45"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 64 ],
+            "B": [ 22 ],
+            "Y": [ 65 ]
+          }
+        },
+        "$or$/foss/designs/ece429-tt-design-project/src/project.v:200$15": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:200.7-200.53"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 66 ],
+            "B": [ 23 ],
+            "Y": [ 67 ]
+          }
+        },
+        "$or$/foss/designs/ece429-tt-design-project/src/project.v:200$17": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:200.7-200.61"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 68 ],
+            "B": [ 24 ],
+            "Y": [ 69 ]
+          }
+        },
+        "$or$/foss/designs/ece429-tt-design-project/src/project.v:200$19": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:200.7-200.69"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 70 ],
+            "B": [ 25 ],
+            "Y": [ 71 ]
+          }
+        },
+        "$or$/foss/designs/ece429-tt-design-project/src/project.v:200$7": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:200.7-200.21"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18 ],
+            "B": [ 19 ],
+            "Y": [ 72 ]
+          }
+        },
+        "$or$/foss/designs/ece429-tt-design-project/src/project.v:200$9": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:200.7-200.29"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 73 ],
+            "B": [ 20 ],
+            "Y": [ 61 ]
+          }
+        },
+        "$procmux$22": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000001000",
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:192.22-192.22|/foss/designs/ece429-tt-design-project/src/project.v:178.3-195.10"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            "B": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", 53, 54, 55, 56, 57, 58, 59, 60, 74, 75, 76, 77, 78, 79, 80, 81, 38, 39, 40, 41, 42, 43, 44, 45, 30, 31, 32, 33, 34, 35, 36, 37, 10, 11, 12, 13, 14, 15, 16, 17 ],
+            "S": [ 82, 83, 84, 85, 86, 87, 88, 89 ],
+            "Y": [ 18, 19, 20, 21, 22, 23, 24, 25 ]
+          }
+        },
+        "$procmux$23_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:192.22-192.22|/foss/designs/ece429-tt-design-project/src/project.v:178.3-195.10"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 26, 27, 28 ],
+            "B": [ "1", "1", "1" ],
+            "Y": [ 82 ]
+          }
+        },
+        "$procmux$24_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:190.22-190.22|/foss/designs/ece429-tt-design-project/src/project.v:178.3-195.10"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 26, 27, 28 ],
+            "B": [ "0", "1", "1" ],
+            "Y": [ 83 ]
+          }
+        },
+        "$procmux$25_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:188.20-188.20|/foss/designs/ece429-tt-design-project/src/project.v:178.3-195.10"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 26, 27, 28 ],
+            "B": [ "1", "0", "1" ],
+            "Y": [ 84 ]
+          }
+        },
+        "$procmux$26_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:186.27-186.27|/foss/designs/ece429-tt-design-project/src/project.v:178.3-195.10"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 26, 27, 28 ],
+            "B": [ "0", "0", "1" ],
+            "Y": [ 85 ]
+          }
+        },
+        "$procmux$27_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:184.27-184.27|/foss/designs/ece429-tt-design-project/src/project.v:178.3-195.10"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 26, 27, 28 ],
+            "B": [ "1", "1", "0" ],
+            "Y": [ 86 ]
+          }
+        },
+        "$procmux$28_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:182.27-182.27|/foss/designs/ece429-tt-design-project/src/project.v:178.3-195.10"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 26, 27, 28 ],
+            "B": [ "0", "1", "0" ],
+            "Y": [ 87 ]
+          }
+        },
+        "$procmux$29_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:180.19-180.19|/foss/designs/ece429-tt-design-project/src/project.v:178.3-195.10"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 26, 27, 28 ],
+            "B": [ "1", "0", "0" ],
+            "Y": [ 88 ]
+          }
+        },
+        "$procmux$30_CMP0": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:178.11-178.11|/foss/designs/ece429-tt-design-project/src/project.v:178.3-195.10"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 26, 27, 28 ],
+            "Y": [ 89 ]
+          }
+        }
+      },
+      "netnames": {
+        "$add$/foss/designs/ece429-tt-design-project/src/project.v:182$3_Y": {
+          "hide_name": 1,
+          "bits": [ 30, 31, 32, 33, 34, 35, 36, 37 ],
+          "attributes": {
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:182.13-182.26"
+          }
+        },
+        "$and$/foss/designs/ece429-tt-design-project/src/project.v:184$4_Y": {
+          "hide_name": 1,
+          "bits": [ 38, 39, 40, 41, 42, 43, 44, 45 ],
+          "attributes": {
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:184.13-184.26"
+          }
+        },
+        "$flatten\\shifter.$procmux$33_CMP": {
+          "hide_name": 1,
+          "bits": [ 46 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\shifter.$procmux$34_CMP": {
+          "hide_name": 1,
+          "bits": [ 47 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\shifter.$procmux$35_CMP": {
+          "hide_name": 1,
+          "bits": [ 48 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\shifter.$procmux$36_CMP": {
+          "hide_name": 1,
+          "bits": [ 49 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\shifter.$procmux$37_CMP": {
+          "hide_name": 1,
+          "bits": [ 50 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\shifter.$procmux$38_CMP": {
+          "hide_name": 1,
+          "bits": [ 51 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\shifter.$procmux$39_CMP": {
+          "hide_name": 1,
+          "bits": [ 52 ],
+          "attributes": {
+          }
+        },
+        "$not$/foss/designs/ece429-tt-design-project/src/project.v:200$10_Y": {
+          "hide_name": 1,
+          "bits": [ 62 ],
+          "attributes": {
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:200.7-200.29"
+          }
+        },
+        "$not$/foss/designs/ece429-tt-design-project/src/project.v:200$12_Y": {
+          "hide_name": 1,
+          "bits": [ 64 ],
+          "attributes": {
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:200.7-200.37"
+          }
+        },
+        "$not$/foss/designs/ece429-tt-design-project/src/project.v:200$14_Y": {
+          "hide_name": 1,
+          "bits": [ 66 ],
+          "attributes": {
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:200.7-200.45"
+          }
+        },
+        "$not$/foss/designs/ece429-tt-design-project/src/project.v:200$16_Y": {
+          "hide_name": 1,
+          "bits": [ 68 ],
+          "attributes": {
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:200.7-200.53"
+          }
+        },
+        "$not$/foss/designs/ece429-tt-design-project/src/project.v:200$18_Y": {
+          "hide_name": 1,
+          "bits": [ 70 ],
+          "attributes": {
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:200.7-200.61"
+          }
+        },
+        "$not$/foss/designs/ece429-tt-design-project/src/project.v:200$8_Y": {
+          "hide_name": 1,
+          "bits": [ 73 ],
+          "attributes": {
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:200.7-200.21"
+          }
+        },
+        "$or$/foss/designs/ece429-tt-design-project/src/project.v:186$5_Y": {
+          "hide_name": 1,
+          "bits": [ 74, 75, 76, 77, 78, 79, 80, 81 ],
+          "attributes": {
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:186.13-186.26"
+          }
+        },
+        "$or$/foss/designs/ece429-tt-design-project/src/project.v:200$11_Y": {
+          "hide_name": 1,
+          "bits": [ 63 ],
+          "attributes": {
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:200.7-200.37"
+          }
+        },
+        "$or$/foss/designs/ece429-tt-design-project/src/project.v:200$13_Y": {
+          "hide_name": 1,
+          "bits": [ 65 ],
+          "attributes": {
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:200.7-200.45"
+          }
+        },
+        "$or$/foss/designs/ece429-tt-design-project/src/project.v:200$15_Y": {
+          "hide_name": 1,
+          "bits": [ 67 ],
+          "attributes": {
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:200.7-200.53"
+          }
+        },
+        "$or$/foss/designs/ece429-tt-design-project/src/project.v:200$17_Y": {
+          "hide_name": 1,
+          "bits": [ 69 ],
+          "attributes": {
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:200.7-200.61"
+          }
+        },
+        "$or$/foss/designs/ece429-tt-design-project/src/project.v:200$19_Y": {
+          "hide_name": 1,
+          "bits": [ 71 ],
+          "attributes": {
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:200.7-200.69"
+          }
+        },
+        "$or$/foss/designs/ece429-tt-design-project/src/project.v:200$7_Y": {
+          "hide_name": 1,
+          "bits": [ 72 ],
+          "attributes": {
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:200.7-200.21"
+          }
+        },
+        "$or$/foss/designs/ece429-tt-design-project/src/project.v:200$9_Y": {
+          "hide_name": 1,
+          "bits": [ 61 ],
+          "attributes": {
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:200.7-200.29"
+          }
+        },
+        "$procmux$23_CMP": {
+          "hide_name": 1,
+          "bits": [ 82 ],
+          "attributes": {
+          }
+        },
+        "$procmux$24_CMP": {
+          "hide_name": 1,
+          "bits": [ 83 ],
+          "attributes": {
+          }
+        },
+        "$procmux$25_CMP": {
+          "hide_name": 1,
+          "bits": [ 84 ],
+          "attributes": {
+          }
+        },
+        "$procmux$26_CMP": {
+          "hide_name": 1,
+          "bits": [ 85 ],
+          "attributes": {
+          }
+        },
+        "$procmux$27_CMP": {
+          "hide_name": 1,
+          "bits": [ 86 ],
+          "attributes": {
+          }
+        },
+        "$procmux$28_CMP": {
+          "hide_name": 1,
+          "bits": [ 87 ],
+          "attributes": {
+          }
+        },
+        "$procmux$29_CMP": {
+          "hide_name": 1,
+          "bits": [ 88 ],
+          "attributes": {
+          }
+        },
+        "$procmux$30_CMP": {
+          "hide_name": 1,
+          "bits": [ 89 ],
+          "attributes": {
+          }
+        },
+        "data1": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9 ],
+          "attributes": {
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:164.22-164.27"
+          }
+        },
+        "data2": {
+          "hide_name": 0,
+          "bits": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+          "attributes": {
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:165.22-165.27"
+          }
+        },
+        "op": {
+          "hide_name": 0,
+          "bits": [ 26, 27, 28 ],
+          "attributes": {
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:166.22-166.24"
+          }
+        },
+        "rShiftRes": {
+          "hide_name": 0,
+          "bits": [ 53, 54, 55, 56, 57, 58, 59, 60 ],
+          "attributes": {
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:170.15-170.24"
+          }
+        },
+        "res": {
+          "hide_name": 0,
+          "bits": [ 18, 19, 20, 21, 22, 23, 24, 25 ],
+          "attributes": {
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:167.22-167.25"
+          }
+        },
+        "z": {
+          "hide_name": 0,
+          "bits": [ 29 ],
+          "attributes": {
+            "src": "/foss/designs/ece429-tt-design-project/src/project.v:168.16-168.17"
+          }
+        }
+      }
+    }
+  }
+}

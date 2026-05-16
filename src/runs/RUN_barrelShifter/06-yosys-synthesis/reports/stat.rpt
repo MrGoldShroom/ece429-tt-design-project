@@ -1,0 +1,32 @@
+101. Printing statistics.
+
+=== barrelShifter ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       59        - wires
+       75        - wire bits
+        3        - public wires
+       19        - public wire bits
+        3        - ports
+       19        - port bits
+       64  701.923 cells
+        5    62.56   sky130_fd_sc_hd__a2111o_2
+        5   56.304   sky130_fd_sc_hd__a221o_2
+        3   30.029   sky130_fd_sc_hd__a22o_2
+        3   22.522   sky130_fd_sc_hd__and2_2
+        1    10.01   sky130_fd_sc_hd__and3b_2
+       12   135.13   sky130_fd_sc_hd__and4b_2
+       12  150.144   sky130_fd_sc_hd__and4bb_2
+        1    10.01   sky130_fd_sc_hd__nand3_2
+        1    10.01   sky130_fd_sc_hd__nor3_2
+        2   25.024   sky130_fd_sc_hd__nor3b_2
+        8   80.077   sky130_fd_sc_hd__o211a_2
+        5   50.048   sky130_fd_sc_hd__o22a_2
+        3   33.782   sky130_fd_sc_hd__o32a_2
+        3   26.275   sky130_fd_sc_hd__or4_2
+
+   Chip area for module '\barrelShifter': 701.923200
+     of which used for sequential elements: 0.000000 (0.00%)
+

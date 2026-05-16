@@ -1,0 +1,3 @@
+
+15. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\pcInc.\res' from process `\pcInc.$proc$/foss/designs/ece429-tt-design-project/src/project.v:252$2'.

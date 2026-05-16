@@ -1,0 +1,5 @@
+
+15. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\alu.\z' from process `\alu.$proc$/foss/designs/ece429-tt-design-project/src/project.v:198$6'.
+No latch inferred for signal `\alu.\res' from process `\alu.$proc$/foss/designs/ece429-tt-design-project/src/project.v:175$2'.
+No latch inferred for signal `\barrelShifter.\result' from process `\barrelShifter.$proc$/foss/designs/ece429-tt-design-project/src/project.v:146$21'.

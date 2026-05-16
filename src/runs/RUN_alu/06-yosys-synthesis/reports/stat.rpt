@@ -1,0 +1,49 @@
+108. Printing statistics.
+
+=== alu ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+      131        - wires
+      154        - wire bits
+        5        - public wires
+       28        - public wire bits
+        5        - ports
+       28        - port bits
+      135 1.25E+03 cells
+        8   80.077   sky130_fd_sc_hd__a211o_2
+        1    10.01   sky130_fd_sc_hd__a21bo_2
+        8   70.067   sky130_fd_sc_hd__a21o_2
+        4   35.034   sky130_fd_sc_hd__a21oi_2
+       15  168.912   sky130_fd_sc_hd__a221o_2
+       10  100.096   sky130_fd_sc_hd__a22o_2
+       11   96.342   sky130_fd_sc_hd__a31o_2
+        1   11.261   sky130_fd_sc_hd__a41o_2
+       12   90.086   sky130_fd_sc_hd__and2_2
+        3   26.275   sky130_fd_sc_hd__and2b_2
+        1    7.507   sky130_fd_sc_hd__and3_2
+        4   40.038   sky130_fd_sc_hd__and3b_2
+        1   11.261   sky130_fd_sc_hd__mux2_1
+        6   37.536   sky130_fd_sc_hd__nand2_2
+        1    8.758   sky130_fd_sc_hd__nand2b_2
+        1    10.01   sky130_fd_sc_hd__nand3_2
+        5    31.28   sky130_fd_sc_hd__nor2_2
+        2   20.019   sky130_fd_sc_hd__nor3_2
+        5    62.56   sky130_fd_sc_hd__nor3b_2
+        7   70.067   sky130_fd_sc_hd__o211a_2
+        1   12.512   sky130_fd_sc_hd__o211ai_2
+        3   26.275   sky130_fd_sc_hd__o21a_2
+        1    10.01   sky130_fd_sc_hd__o21ba_2
+        2   20.019   sky130_fd_sc_hd__o22a_2
+        2   22.522   sky130_fd_sc_hd__o2bb2a_2
+        5   56.304   sky130_fd_sc_hd__o32a_2
+       10    62.56   sky130_fd_sc_hd__or2_2
+        1    7.507   sky130_fd_sc_hd__or3_2
+        1    8.758   sky130_fd_sc_hd__or3b_2
+        2   17.517   sky130_fd_sc_hd__or4_2
+        1   16.266   sky130_fd_sc_hd__xnor2_2
+
+   Chip area for module '\alu': 1247.446400
+     of which used for sequential elements: 0.000000 (0.00%)
+

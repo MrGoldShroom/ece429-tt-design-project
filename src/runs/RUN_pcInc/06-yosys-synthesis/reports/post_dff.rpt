@@ -1,0 +1,31 @@
+93. Printing statistics.
+
+=== pcInc ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       51 wires
+      113 wire bits
+        2 public wires
+       64 public wire bits
+        2 ports
+       64 port bits
+       79 cells
+       13   $_ANDNOT_
+        2   $_AND_
+       14   $_NAND_
+        1   $_NOR_
+        1   $_NOT_
+       19   $_OR_
+       12   $_XNOR_
+       17   $_XOR_
+
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_NOT_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_XNOR_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+
