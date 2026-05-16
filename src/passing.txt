@@ -1,8 +1,0 @@
-pcInc
-barrelShifter
-alu
-
-Failures:
-regFile		Stage 8
-mux		Stage 20
-tcmp		Stage 20
