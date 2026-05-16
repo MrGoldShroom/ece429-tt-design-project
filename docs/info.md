@@ -9,11 +9,12 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-This model works by reading a three-bit opcode to determine the function to operate.
+This model is loosely based off of the MIPS archetecture. First, the program counter is advanced and an instruction is loaded into the main control unit. Next, the register file loaded in, using data from the instruction to point to different registers. The op code is then used to determine the outputs of two multiplexers and select a function for the arithmetic logic unit. The result of the ALU can then be read by the user.
 
+![image](ECE 429 Block Diagram.png)
 ## How to test
 
-Select an opcode to use, determine what the result should be first, then compare with the output.
+Write an instruction that you would know the output of, then feed the instruction into the CPU and wait for the result. 
 
 ## External hardware
 
