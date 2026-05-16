@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778898514" />
+    <testcase name="test_project" classname="test" file="/foss/designs/ece429-tt-design-project/test_pcInc/test.py" lineno="9" time="0.0005221366882324219" sim_time_ns="0.0" ratio_time="0.0">
+      <failure error_type="TypeError" error_msg="Unsupported type for value assignment: &lt;class 'bytes'&gt; (b'00000000000000000000000000000000')" />
+    </testcase>
+  </testsuite>
+</testsuites>

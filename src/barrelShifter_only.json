@@ -1,0 +1,6 @@
+{
+  "DESIGN_NAME": "barrelShifter",
+  "VERILOG_FILES": "dir::project.v",
+  "CLOCK_PERIOD": 25,
+  "CLOCK_PORT": "clk"
+}

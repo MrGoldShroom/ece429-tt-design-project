@@ -2,8 +2,8 @@
  * Copyright (c) 2026 Spencer Perry
  * SPDX-License-Identifier: Apache-2.0
  */
-
-`default_nettype none
+`timescale		    1ns/1ps
+`default_nettype    none
 
 // Top-Level Entity
 module tt_um_cpu8_mgs (pc, instruction, clk, rst);
@@ -204,8 +204,8 @@ endmodule
 // Register File
 module regFile (in, out1, out2, inAddr, outAddr1, outAddr2, write, clk, rst);
 input wire [2:0] inAddr;
-input wire [7:0] outAddr1;
-input wire [7:0] outAddr2;
+input wire [2:0] outAddr1;
+input wire [2:0] outAddr2;
 input wire write;
 input wire clk;
 input wire rst;
@@ -217,29 +217,30 @@ output wire [7:0] out2;
 integer i;
 
 // Create register array
-reg [7:0] regFile [0:7];
+reg [7:0] registers [0:7];
 
 // Reset registers
 	always_latch
 	if (rst == 1) begin
 		for (i = 0; i < 8; i = i + 1)
 		begin
-		regFile[i] = 8'b00000000;
+		registers[i] = 8'b00000000;
 		end
 		
 	end
-	
+
 	// Write to register
 	always@(posedge clk)
 	begin
 		if(write == 1'b1 && rst == 1'b0) begin
-			#2 regFile [inAddr] = in;
+			//#2 registers[inAddr] = in;
 		end
+
 	end
 		
 	// Read inputs from registers
-	assign #2 out1 = regFile[outAddr1];
-	assign #2 out2 = regFile[outAddr2];
+	assign #2 out1 = registers[outAddr1];
+	assign #2 out2 = registers[outAddr2];
 		
 endmodule
 
